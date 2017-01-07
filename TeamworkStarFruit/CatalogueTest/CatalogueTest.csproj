@@ -33,15 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BagLib">
-      <HintPath>..\BagLib\bin\Debug\BagLib.dll</HintPath>
-    </Reference>
-    <Reference Include="CatalogueLib">
-      <HintPath>..\CatalogueLib\bin\Debug\CatalogueLib.dll</HintPath>
-    </Reference>
-    <Reference Include="MenuLib">
-      <HintPath>..\MenuLib\bin\Debug\MenuLib.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,6 +48,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BagLib\BagLib.csproj">
+      <Project>{d9292d92-0955-44b6-b034-c01fa483d8ec}</Project>
+      <Name>BagLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CatalogueLib\CatalogueLib.csproj">
+      <Project>{aae64ff6-4106-47a6-8686-89b124fc902e}</Project>
+      <Name>CatalogueLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MenuLib\MenuLib.csproj">
+      <Project>{b5cd2dce-35ca-4093-bc18-9dfa2cd15d3b}</Project>
+      <Name>MenuLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
