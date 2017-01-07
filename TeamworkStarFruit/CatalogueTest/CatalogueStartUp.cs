@@ -3,6 +3,7 @@ using CatalogueLib;
 using MenuLib;
 using BagLib;
 using FactoryLib;
+using FactoryLib.Utilities;
 
 namespace CatalogueTest
 {
@@ -14,7 +15,7 @@ namespace CatalogueTest
         {
             Catalogue myCatalogue = new Catalogue();
             Bag myBag = new Bag();
-            Factory myFactory = new Factory();
+            Factory myFactory = new Factory(new IDGenerator());
             Start(myCatalogue, myBag, myFactory);
         }
 
