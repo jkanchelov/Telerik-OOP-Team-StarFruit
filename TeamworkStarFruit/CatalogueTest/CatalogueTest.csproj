@@ -34,13 +34,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="BagLib">
-      <HintPath>..\BagLib\bin\Debug\BagLib.dll</HintPath>
+      <HintPath>..\BagLib\obj\Debug\BagLib.dll</HintPath>
     </Reference>
     <Reference Include="CatalogueLib">
-      <HintPath>..\CatalogueLib\bin\Debug\CatalogueLib.dll</HintPath>
+      <HintPath>..\CatalogueLib\obj\Debug\CatalogueLib.dll</HintPath>
     </Reference>
     <Reference Include="MenuLib">
-      <HintPath>..\MenuLib\bin\Debug\MenuLib.dll</HintPath>
+      <HintPath>..\MenuLib\obj\Debug\MenuLib.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -57,6 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExceptionLib\ExceptionLib.csproj">
+      <Project>{5e5cafe6-76c1-4a0e-88a5-2a525e05b55d}</Project>
+      <Name>ExceptionLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
