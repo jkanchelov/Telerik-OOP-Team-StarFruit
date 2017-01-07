@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using CatalogueLib;
 using MenuLib;
 using BagLib;
@@ -10,7 +6,7 @@ using BagLib;
 
 namespace CatalogueTest
 {
-    class Program
+    class CatalogueStartUp
     {
         public const string adminPass = "starfruits";
 

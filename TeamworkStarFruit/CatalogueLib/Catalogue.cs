@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.Generic;
 using ExceptionLib;
 
 namespace CatalogueLib
@@ -81,6 +79,11 @@ namespace CatalogueLib
                                   where product is SmallAppliances
                                   select product;
             return smallAppliances;
+        }
+
+        public void RemoveAll()
+        {
+            throw new NotImplementedException();
         }
     }
 }

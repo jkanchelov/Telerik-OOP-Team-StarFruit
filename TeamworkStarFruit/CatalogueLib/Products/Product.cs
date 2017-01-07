@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogueLib.Products.Enumerations;
+﻿using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib
 {
@@ -28,7 +23,7 @@ namespace CatalogueLib
             }
             else
             {
-                return $"Brand: {this.brand}\nProduct is not available at the moment."
+                return $"Brand: {this.brand}\nProduct is not available at the moment.";
             }
         }
     }

@@ -1,13 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ExceptionLib;
+﻿using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib
 {
     public abstract class BigAppliances : Product
     {
+        public BigAppliances(bool isAvailable, Brand brand)
+            :base(isAvailable, brand)
+        {
+
+        }
     }
 }
