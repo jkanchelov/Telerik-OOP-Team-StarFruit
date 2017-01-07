@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FactoryLib
 {
-    interface ISmallApplianciesFactory
+    public interface ISmallAppliancesFactory
     {
     }
 }

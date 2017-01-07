@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FactoryLib
 {
-    public class Class1
+    public class Factory : IMobileFactory, IBigAppliancesFactory, IComputerFactory, ISmallAppliancesFactory
     {
+        // TO DO
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace FactoryLib
 {
-    interface IMobileFactory
+    public interface IMobileFactory
     {
+        // TO DO
     }
 }

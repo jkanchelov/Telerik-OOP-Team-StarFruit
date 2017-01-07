@@ -65,14 +65,6 @@ namespace CatalogueLib
             return mobiles;
         }
 
-        public IEnumerable<Product> ShowPrinters()
-        {
-            var printers = from product in this.catalogue
-                          where product is Printer
-                          select product;
-            return printers; 
-        }
-
         public IEnumerable<Product> ShowSmallAppliances()
         {
             var smallAppliances = from product in this.catalogue

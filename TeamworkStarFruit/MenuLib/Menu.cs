@@ -25,7 +25,6 @@ namespace MenuLib
             Console.WriteLine("(2) --> Show Small Appliances.");
             Console.WriteLine("(3) --> Show Mobiles.");
             Console.WriteLine("(4) --> Show Computers.");
-            Console.WriteLine("(5) --> Show Printers.");
         }
 
         public static void AddProductMenu()
