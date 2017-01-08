@@ -36,7 +36,6 @@ namespace MenuLib
         //and print msg
         public void Navigate()
         {
-<<<<<<< HEAD
             string key = "1";
             string option = ""; 
             int bound = 0;
@@ -82,13 +81,6 @@ namespace MenuLib
                     Menu.ShowMenu(key);
                 }
             }
-=======
-            Console.WriteLine("----------------- MENU -----------------");
-            Console.WriteLine("(1) --> Show Big Appliances.");
-            Console.WriteLine("(2) --> Show Small Appliances.");
-            Console.WriteLine("(3) --> Show Mobiles.");
-            Console.WriteLine("(4) --> Show Computers.");
->>>>>>> 6c720230c7602a5b0d7fed1aceaf1cf6c1da6ede
         }
 
 
