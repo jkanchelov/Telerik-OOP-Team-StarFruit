@@ -3,6 +3,8 @@ using System.Linq;
 using System.Collections.Generic;
 using ExceptionLib;
 
+
+
 namespace CatalogueLib
 {
     public class Catalogue : IChangeable, ISortable
@@ -11,6 +13,16 @@ namespace CatalogueLib
         public Catalogue()
         {
             this.catalogue = new List<Product>();
+        }
+
+        public List<Product> Initialcatalog()
+        {
+
+            catalogue.Add(new Computer(true, Products.Enumerations.Brand.HP));
+            catalogue.Add(new Computer(true, Products.Enumerations.Brand.DELL));
+            catalogue.Add(new Computer(true, Products.Enumerations.Brand.LENOVO));
+
+            return catalogue;
         }
 
         public void AddProduct(Product product)

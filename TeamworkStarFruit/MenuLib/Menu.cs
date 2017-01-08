@@ -1,21 +1,34 @@
 ﻿using System;
 using System.Text;
 using System.Collections.Generic;
+using CatalogueLib;
 
 namespace MenuLib
 {
     public class Menu
     {
         public static Dictionary<string, string> menuPages = new Dictionary<string, string>();
+        public static List<Product> list = new List<Product>();
         private const string adminPass = "starfruits";
         // TO DO add menu pages
         public static void CreateMenu()
         {
+            Catalogue pc = new Catalogue();
+            list = pc.Initialcatalog();
+            //think about using only one obj of StringBuilder to pass the values to a dictionary 
+            //or make objects for all categories
+            StringBuilder cat = new StringBuilder();
+            cat.Append("--This is Computers categorie--\n(1) --> Back.\n");
+            foreach (var item in list)
+            {
+                cat.Append(item);
+            }
             menuPages.Add("1", "(1) --> Enter like admin.\n(2) --> Enter like customer.\n(3) --> Exit.");
             menuPages.Add("11", "(1) --> Show categories.\n(2) --> Back.");
             menuPages
                 .Add("111",
                 "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Show Printers.\n(6) --> Back");
+            menuPages.Add("1114",cat.ToString());
 
         }
 
@@ -84,7 +97,11 @@ namespace MenuLib
                     {
                         key = CheckPassword(key);
                     }
-
+                    //else if (key == "1114")
+                    //{
+                    //    //show computers
+                    //   //TO DO take the new value and asign it to the dictionari with key == "1114"
+                    //}
                     Menu.ShowMenu(key);
                 }
             }
