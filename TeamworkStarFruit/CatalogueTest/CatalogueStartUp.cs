@@ -2,16 +2,14 @@
 using CatalogueLib;
 using MenuLib;
 using BagLib;
-//using FactoryLib;
-//using FactoryLib.Utilities;
+using FactoryLib;
+using FactoryLib.Utilities;
 
 namespace CatalogueTest
 {
-    class CatalogueStartUp
+    public class CatalogueStartUp
     {
-        private const string adminPass = "starfruits";
-
-        static void Main(string[] args)
+        static void Main()
         {
 
             Menu m = new Menu();

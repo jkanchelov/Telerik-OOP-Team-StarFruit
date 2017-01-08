@@ -7,6 +7,7 @@ namespace MenuLib
     public class Menu
     {
         public static Dictionary<string, string> menuPages = new Dictionary<string, string>();
+        private const string adminPass = "starfruits";
         // TO DO add menu pages
         public static void CreateMenu()
         {
@@ -47,7 +48,7 @@ namespace MenuLib
                 {
                     case "1": bound = 3; break;
                     case "11": bound = 2; break;
-                    case "111": bound = bound = 6; break;
+                    case "111": bound = 6; break;
                 }
 
 
@@ -78,11 +79,33 @@ namespace MenuLib
                     {
                         key = key + option.ToString();
                     }
+
+                    if (key == "11")
+                    {
+                        key = CheckPassword(key);
+                    }
+
                     Menu.ShowMenu(key);
                 }
             }
         }
 
+
+        private string CheckPassword(string key)
+        {
+            Console.Clear();
+            Console.Write("Password:");
+            string pass = Console.ReadLine();
+            if (pass != adminPass)
+            {
+                Console.WriteLine("Wrong password. Press any key to continue.\nFrom the previous menu.");
+                Console.ReadKey();
+
+                key = "1";
+            }
+
+            return key;
+        }
 
         public static void AddProductMenu()
         {
