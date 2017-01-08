@@ -87,7 +87,7 @@ namespace CatalogueLib
 
         public void RemoveAll()
         {
-            throw new NotImplementedException();
+            this.catalogue.Clear();
         }
     }
 }
