@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BagLib", "BagLib\BagLib.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionLib", "ExceptionLib\ExceptionLib.csproj", "{5E5CAFE6-76C1-4A0E-88A5-2A525E05B55D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryLib", "FactoryLib\FactoryLib.csproj", "{054ADDFB-1397-4937-BF22-F368DB5A4803}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{5E5CAFE6-76C1-4A0E-88A5-2A525E05B55D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E5CAFE6-76C1-4A0E-88A5-2A525E05B55D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E5CAFE6-76C1-4A0E-88A5-2A525E05B55D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{054ADDFB-1397-4937-BF22-F368DB5A4803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{054ADDFB-1397-4937-BF22-F368DB5A4803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{054ADDFB-1397-4937-BF22-F368DB5A4803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{054ADDFB-1397-4937-BF22-F368DB5A4803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

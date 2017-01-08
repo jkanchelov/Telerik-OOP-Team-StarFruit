@@ -49,7 +49,7 @@ namespace BagLib
             StringBuilder products = new StringBuilder();
             foreach (var product in productsInBag)
             {
-                products.Append(product + "\n");
+                products.AppendLine(product.ToString());
             }
             return products.ToString();
         }
