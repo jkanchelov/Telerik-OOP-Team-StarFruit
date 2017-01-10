@@ -1,30 +1,127 @@
 ﻿using System;
+using System.Text;
+using System.Collections.Generic;
+using CatalogueLib;
 
 namespace MenuLib
 {
     public class Menu
     {
-        public static void ShowMainMenu()
+        public static Dictionary<string, string> menuPages = new Dictionary<string, string>();
+        public static List<Product> list = new List<Product>();
+        private const string adminPass = "starfruits";
+        // TO DO add menu pages
+        public static void CreateMenu()
         {
-            Console.WriteLine("----------------- MENU -----------------");
-            Console.WriteLine("(1) --> Show all products in catalogue.");
-            Console.WriteLine("(2) --> Show products in a group.");
-            Console.WriteLine("(3) --> Add a product to your bag.");
-            Console.WriteLine("(4) --> Remove product from your bag.");
-            Console.WriteLine("(5) --> Show products in your bag.");
-            Console.WriteLine("(6) --> Pay.");
-            Console.WriteLine("(7) --> Add product to catalogue.");
-            Console.WriteLine("(8) --> Remove product from catalogue.");
-            Console.WriteLine("(9) --> Exit.");
+            Catalogue pc = new Catalogue();
+            list = pc.Initialcatalog();
+            //think about using only one obj of StringBuilder to pass the values to a dictionary 
+            //or make objects for all categories
+            StringBuilder cat = new StringBuilder();
+            cat.Append("--This is Computers categorie--\n(1) --> Back.\n");
+            foreach (var item in list)
+            {
+                cat.Append(item);
+            }
+            menuPages.Add("1", "(1) --> Enter like admin.\n(2) --> Enter like customer.\n(3) --> Exit.");
+            menuPages.Add("11", "(1) --> Show categories.\n(2) --> Back.");
+            menuPages
+                .Add("111",
+                "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Show Printers.\n(6) --> Back");
+            menuPages.Add("1114",cat.ToString());
+
         }
 
-        public static void GroupProductsMenu()
+        public static void ShowMenu(string key)
         {
-            Console.WriteLine("----------------- MENU -----------------");
-            Console.WriteLine("(1) --> Show Big Appliances.");
-            Console.WriteLine("(2) --> Show Small Appliances.");
-            Console.WriteLine("(3) --> Show Mobiles.");
-            Console.WriteLine("(4) --> Show Computers.");
+            Console.Clear();
+            Console.WriteLine("Press the symbol in the brakets to navigate the menu.");
+            Console.WriteLine("-----------------------------------------------------");
+            foreach (KeyValuePair<string, string> kvp in menuPages)
+            {
+                if (key == kvp.Key)
+                {
+                    Console.WriteLine(kvp.Value);
+                }
+            }
+        }
+
+        //TO Do Exception handling or go to the top of the loop if the input is bad
+        //and print msg
+        public void Navigate()
+        {
+            string key = "1";
+            string option = ""; 
+            int bound = 0;
+            while (true)
+            {
+                option = Console.ReadLine();
+
+                switch (key)
+                {
+                    case "1": bound = 3; break;
+                    case "11": bound = 2; break;
+                    case "111": bound = 6; break;
+                }
+
+
+                if (option.Length > 1)
+                {
+                    Console.WriteLine("plese use the numbers in the brackets");
+                    continue;
+                }
+                else if (!(Convert.ToChar(option) - '0' >= 0 && Convert.ToChar(option) - '0' <= bound))
+                {
+                    Console.WriteLine("Please use a digit which is in range between 1 and {0}", bound);
+                    continue;
+                }
+                else if(Convert.ToInt32(option) <= bound)
+                {
+                    
+                    if (Convert.ToInt32(option) == bound)
+                    {
+                        StringBuilder temp = new StringBuilder();
+                        for (int i = 0; i < key.Length - 1; i++)
+                        {
+                            temp.Append(key[i]);
+                        }
+                        key = temp.ToString();
+                        temp.Clear();
+                    }
+                    else
+                    {
+                        key = key + option.ToString();
+                    }
+
+                    if (key == "11")
+                    {
+                        key = CheckPassword(key);
+                    }
+                    //else if (key == "1114")
+                    //{
+                    //    //show computers
+                    //   //TO DO take the new value and asign it to the dictionari with key == "1114"
+                    //}
+                    Menu.ShowMenu(key);
+                }
+            }
+        }
+
+
+        private string CheckPassword(string key)
+        {
+            Console.Clear();
+            Console.Write("Password:");
+            string pass = Console.ReadLine();
+            if (pass != adminPass)
+            {
+                Console.WriteLine("Wrong password. Press any key to continue.\nFrom the previous menu.");
+                Console.ReadKey();
+
+                key = "1";
+            }
+
+            return key;
         }
 
         public static void AddProductMenu()
