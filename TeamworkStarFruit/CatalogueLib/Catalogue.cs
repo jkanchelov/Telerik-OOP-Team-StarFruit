@@ -15,16 +15,6 @@ namespace CatalogueLib
             this.catalogue = new List<Product>();
         }
 
-        public List<Product> Initialcatalog()
-        {
-
-            catalogue.Add(new Computer(true, Products.Enumerations.Brand.HP));
-            catalogue.Add(new Computer(true, Products.Enumerations.Brand.DELL));
-            catalogue.Add(new Computer(true, Products.Enumerations.Brand.LENOVO));
-
-            return catalogue;
-        }
-
         public void AddProduct(Product product)
         {
             catalogue.Add(product);
