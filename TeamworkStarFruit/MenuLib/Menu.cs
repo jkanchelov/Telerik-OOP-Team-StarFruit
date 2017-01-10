@@ -17,17 +17,36 @@ namespace MenuLib
             //list = pc.Initialcatalog();
             //think about using only one obj of StringBuilder to pass the values to a dictionary 
             //or make objects for all categories
+          
+            menuPages.Add("1", "(1) --> Enter like admin.\n(2) --> Enter like customer.\n(3) --> Exit.");
+            //admin
+            menuPages.Add("11", "(1) --> Show categories.\n(2) --> Back.");
+            menuPages
+                .Add("111",
+                "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Back");
+
+            //customer
+            menuPages.Add("12", "(1) --> Show categories.\n(2) --> Show your bag.\n(3) --> Back.");
+            menuPages.Add("121", "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Back");
+            //the product pages
+            //need method to chek the id if it exist add it to bag.
+            menuPages.Add("1211", "----- Big Appliances ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            menuPages.Add("1212", "----- small Appliances ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            menuPages.Add("1213", "----- Mobiles ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            menuPages.Add("1214", "----- Computers ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            
+
+
+
+
+            //from key "1111" to key tha last product (type).
+
             StringBuilder cat = new StringBuilder();
             cat.Append("--This is Computers categorie--\n(1) --> Back.\n");
             foreach (var item in list)
             {
                 cat.Append(item);
             }
-            menuPages.Add("1", "(1) --> Enter like admin.\n(2) --> Enter like customer.\n(3) --> Exit.");
-            menuPages.Add("11", "(1) --> Show categories.\n(2) --> Back.");
-            menuPages
-                .Add("111",
-                "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Show Printers.\n(6) --> Back");
             menuPages.Add("1114",cat.ToString());
 
         }
@@ -59,9 +78,24 @@ namespace MenuLib
 
                 switch (key)
                 {
+                    //admin 
                     case "1": bound = 3; break;
                     case "11": bound = 2; break;
-                    case "111": bound = 6; break;
+                    case "111": bound = 5; break;
+                    //customer
+                    case "12": bound = 3; break;
+                    case "121": bound = 5; break;
+                    //products
+                    case "1211": bound = 3; break;
+                    case "1212": bound = 3; break;
+                    case "1213": bound = 3; break;
+                    case "1214": bound = 3; break;
+                    
+                        //TO DO
+                        //1)add to bag
+
+                    //2) Show bag.
+
                 }
 
 
@@ -97,12 +131,38 @@ namespace MenuLib
                     {
                         key = CheckPassword(key);
                     }
-                    //else if (key == "1114")
-                    //{
-                    //    //show computers
-                    //   //TO DO take the new value and asign it to the dictionari with key == "1114"
-                    //}
-                    Menu.ShowMenu(key);
+                    //customers nodes
+                    else if (key == "1211")
+                    {
+                        //big apl
+                        Menu.ShowMenu(key);
+                        Console.WriteLine("big apl collection .. .");
+                    }
+                    else if (key == "1212")
+                    {
+                        //small apl
+                        Menu.ShowMenu(key);
+                        Console.WriteLine("small apl collection .. .");
+
+                    }
+                    else if (key == "1213")
+                    {
+                        //mobiles
+                        Menu.ShowMenu(key);
+                        Console.WriteLine("mobiles collection .. .");
+
+                    }
+                    else if (key == "1214")
+                    {
+                        //show computers
+                        //TO DO take the new value and asign it to the dictionari with key == "1114"
+                        Menu.ShowMenu(key);
+                        Console.WriteLine("some list of computers..............");
+                    }
+                    else
+                    {
+                        Menu.ShowMenu(key);
+                    }
                 }
             }
         }
