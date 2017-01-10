@@ -7,9 +7,9 @@ using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib.Products
 {
-    public class EBook : Mobile
+    class MobilePhone : Mobile
     {
-        public EBook(bool isAvailable, Brand brand) : base(isAvailable, brand)
+        public MobilePhone(bool isAvailable, Brand brand) : base(isAvailable, brand)
         {
         }
 
@@ -19,15 +19,24 @@ namespace CatalogueLib.Products
         public int Memory
         { get; private set; }
 
-        public string SupportedFileFormats
+        public string CPU
         { get; private set; }
 
+        public string GPU
+        { get; private set; }
+
+        public int RAM
+        { get; private set; }
+
+        public string OperatingSystem
+        { get; private set; }
 
         public override string ToString()
         {
             if (this.isAvailable)
             {
-                return $"Model: {this.Model}\nMemory:{this.Memory}\nScreen Size: {this.ScreenSize}\nSupported file formats: {this.SupportedFileFormats}\nConnectivity: {this.Connectivity}";
+                return $"Model: {this.Model}\nScreen Size: {this.ScreenSize}\nMemory: {this.Memory}\nProcessor: {this.CPU}\nPhone GPU: {this.RAM}\n RAM: {this.RAM}\nOperating System: {this.OperatingSystem}";
+
             }
             else
             {
