@@ -130,6 +130,7 @@ namespace MenuLib
                     if (key == "11")
                     {
                         key = CheckPassword(key);
+                        Menu.ShowMenu(key);
                     }
                     //customers nodes
                     else if (key == "1211")
