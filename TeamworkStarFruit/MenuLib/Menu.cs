@@ -13,8 +13,8 @@ namespace MenuLib
         // TO DO add menu pages
         public static void CreateMenu()
         {
-            Catalogue pc = new Catalogue();
-            list = pc.Initialcatalog();
+            //Catalogue pc = new Catalogue();
+            //list = pc.Initialcatalog();
             //think about using only one obj of StringBuilder to pass the values to a dictionary 
             //or make objects for all categories
             StringBuilder cat = new StringBuilder();
