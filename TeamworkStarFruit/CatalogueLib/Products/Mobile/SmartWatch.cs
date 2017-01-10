@@ -7,27 +7,33 @@ using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib.Products
 {
-    public class EBook : Mobile
+    class SmartWatch : Mobile
     {
-        public EBook(bool isAvailable, Brand brand) : base(isAvailable, brand)
+        public SmartWatch(bool isAvailable, Brand brand) : base(isAvailable, brand)
         {
         }
 
         public string Model
         { get; private set; }
 
+        public double Size
+        { get; private set; }
+
         public int Memory
         { get; private set; }
 
-        public string SupportedFileFormats
+        public double CPU
         { get; private set; }
 
+        public bool WaterResistance
+        { get; private set; }
 
         public override string ToString()
         {
             if (this.isAvailable)
             {
-                return $"Model: {this.Model}\nMemory:{this.Memory}\nScreen Size: {this.ScreenSize}\nSupported file formats: {this.SupportedFileFormats}\nConnectivity: {this.Connectivity}";
+                return $"Model: {this.Model}\nSize:{this.Size}\nMemory: {this.Memory}\nProcessor: {this.CPU}\nWater resistance: {this.WaterResistance}";
+
             }
             else
             {

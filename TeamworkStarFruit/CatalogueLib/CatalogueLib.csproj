@@ -42,12 +42,19 @@
   <ItemGroup>
     <Compile Include="Products\BigAppliances.cs" />
     <Compile Include="Catalogue.cs" />
+    <Compile Include="Products\BigAppliances\AirConditioner.cs" />
+    <Compile Include="Products\BigAppliances\Oven.cs" />
+    <Compile Include="Products\BigAppliances\Refrigerator.cs" />
+    <Compile Include="Products\BigAppliances\WashingMachine.cs" />
     <Compile Include="Products\Computer.cs" />
     <Compile Include="IChangeable.cs" />
     <Compile Include="ISortable.cs" />
     <Compile Include="Products\Enumerations\Brand.cs" />
     <Compile Include="Products\Mobile.cs" />
     <Compile Include="Products\Mobile\Ebook.cs" />
+    <Compile Include="Products\Mobile\MobilePhone.cs" />
+    <Compile Include="Products\Mobile\SmartWatch.cs" />
+    <Compile Include="Products\Mobile\Tablet.cs" />
     <Compile Include="Products\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Products\SmallAppliances.cs" />

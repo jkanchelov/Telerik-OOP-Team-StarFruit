@@ -8,6 +8,7 @@ namespace CatalogueLib
         public int Count { get; private set; }
         public Brand brand { get; private set; }
         public int ID { get; private set; }
+        public decimal price { get; private set; }
         public Product(bool isAvailable, Brand brand)
         {
             this.isAvailable = isAvailable;
