@@ -9,7 +9,7 @@ namespace CatalogueLib.Products
 {
     class Tablet : Mobile
     {
-        public Tablet(bool isAvailable, Brand brand) : base(isAvailable, brand)
+        public Tablet(decimal price, bool isAvailable, Brand brand) : base(price, isAvailable, brand)
         {
         }
 

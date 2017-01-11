@@ -4,8 +4,8 @@ namespace CatalogueLib
 {
     public abstract class SmallAppliances : Product
     {
-        public SmallAppliances(bool isAvailable, Brand brand)
-            :base(isAvailable, brand)
+        public SmallAppliances(decimal price, bool isAvailable, Brand brand)
+            :base(price, isAvailable, brand)
         {
 
         }

@@ -9,7 +9,7 @@ namespace CatalogueLib.Products
 {
     class SmartWatch : Mobile
     {
-        public SmartWatch(bool isAvailable, Brand brand) : base(isAvailable, brand)
+        public SmartWatch(decimal price, bool isAvailable, Brand brand) : base(price, isAvailable, brand)
         {
         }
 
