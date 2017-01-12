@@ -9,8 +9,10 @@ namespace CatalogueLib.Products
 {
     class VacuumCleaner : SmallAppliances
     {
-        public VacuumCleaner(decimal price, bool isAvailable, Brand brand) : base(price, isAvailable, brand)
+        public VacuumCleaner(decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, double GarbageBagVolume)
+            : base(price, isAvailable, brand, Capacity, CableLength, Affixes)
         {
+            this.GarbageBagVolume = GarbageBagVolume;
         }
 
         public double GarbageBagVolume // in litres

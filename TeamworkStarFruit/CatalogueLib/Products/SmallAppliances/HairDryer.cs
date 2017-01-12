@@ -9,8 +9,10 @@ namespace CatalogueLib.Products
 {
     class HairDryer : SmallAppliances
     {
-        public HairDryer(decimal price, bool isAvailable, Brand brand) : base(price, isAvailable, brand)
+        public HairDryer(decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, int DifferentSpeeds)
+            : base(price, isAvailable, brand, Capacity, CableLength, Affixes)
         {
+            this.DifferentSpeeds = DifferentSpeeds;
         }
 
         public int DifferentSpeeds

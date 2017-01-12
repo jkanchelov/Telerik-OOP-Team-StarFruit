@@ -9,8 +9,10 @@ namespace CatalogueLib.Products
 {
     class Mixer : SmallAppliances
     {
-        public Mixer(decimal price, bool isAvailable, Brand brand) : base(price, isAvailable, brand)
+        public Mixer(decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, bool HasBowl)
+            : base(price, isAvailable, brand, Capacity, CableLength, Affixes)
         {
+            this.HasBowl = HasBowl;
         }
 
         public bool HasBowl
