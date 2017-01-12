@@ -4,8 +4,8 @@ namespace CatalogueLib
 {
     public abstract class BigAppliances : Product
     {
-        public BigAppliances(decimal price, bool isAvailable, Brand brand)
-            : base(price, isAvailable, brand)
+        public BigAppliances(int ID, decimal price, bool isAvailable, Brand brand)
+            : base(ID, price, isAvailable, brand)
         {
         }
 

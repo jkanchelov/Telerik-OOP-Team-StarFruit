@@ -7,10 +7,10 @@ using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib.Products
 {
-    class Mixer : SmallAppliances
+    public class Mixer : SmallAppliances
     {
-        public Mixer(decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, bool HasBowl)
-            : base(price, isAvailable, brand, Capacity, CableLength, Affixes)
+        public Mixer(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, bool HasBowl)
+            : base(ID, price, isAvailable, brand, Capacity, CableLength, Affixes)
         {
             this.HasBowl = HasBowl;
         }

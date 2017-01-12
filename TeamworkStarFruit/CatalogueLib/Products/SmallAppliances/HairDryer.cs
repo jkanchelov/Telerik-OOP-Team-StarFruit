@@ -7,10 +7,10 @@ using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib.Products
 {
-    class HairDryer : SmallAppliances
+    public class HairDryer : SmallAppliances
     {
-        public HairDryer(decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, int DifferentSpeeds)
-            : base(price, isAvailable, brand, Capacity, CableLength, Affixes)
+        public HairDryer(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, int DifferentSpeeds)
+            : base(ID, price, isAvailable, brand, Capacity, CableLength, Affixes)
         {
             this.DifferentSpeeds = DifferentSpeeds;
         }
