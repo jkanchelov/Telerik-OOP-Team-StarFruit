@@ -1,13 +1,19 @@
 ﻿using CatalogueLib.Products.Enumerations;
+using System.Text;
 
 namespace CatalogueLib
 {
     public abstract class Computer : Product
     {
-        public Computer(decimal price, bool isAvailable, Brand brand)
+        public Computer(decimal price, bool isAvailable, Brand brand, string CPU, int DriveMemory, string VideoCardModel, string OperationSystem, double ScreenSize, int RAM)
             :base(price,isAvailable, brand)
         {
-
+            this.CPU = CPU;
+            this.DriveMemory = DriveMemory;
+            this.VideoCardModel = VideoCardModel;
+            this.OperationSystem = OperationSystem;
+            this.ScreenSize = ScreenSize;
+            this.RAM = RAM;
         }
 
         public string CPU
@@ -33,7 +39,10 @@ namespace CatalogueLib
 
             if (this.isAvailable)
             {
-                return $"Brand: {this.brand}\nCPU:{this.CPU}\nDrive Memory:{this.DriveMemory} megabytes\nVideo Card:{this.VideoCardModel}\nOperation System:{this.OperationSystem}\nScreen size:{this.ScreenSize} inches\nRAM:{this.RAM}";
+                StringBuilder result = new StringBuilder();
+                result.Append(base.ToString());
+                result.Append($"\nCPU:{this.CPU}\nDrive Memory:{this.DriveMemory} megabytes\nVideo Card:{this.VideoCardModel}\nOperation System:{this.OperationSystem}\nScreen size:{this.ScreenSize} inches\nRAM:{this.RAM}");
+                return result.ToString();
             }
             else
             {
