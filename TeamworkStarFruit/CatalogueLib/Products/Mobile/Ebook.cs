@@ -9,15 +9,11 @@ namespace CatalogueLib.Products
 {
     public class EBook : Mobile
     {
-        public EBook(int ID, decimal price, bool isAvailable, Brand brand) : base(ID, price, isAvailable, brand)
+        public EBook(bool isAvailable, Brand brand) : base(isAvailable, brand)
         {
+            this.SupportedFileFormats = SupportedFileFormats;
         }
 
-        public string Model
-        { get; private set; }
-
-        public int Memory
-        { get; private set; }
 
         public string SupportedFileFormats
         { get; private set; }
@@ -27,7 +23,7 @@ namespace CatalogueLib.Products
         {
             if (this.isAvailable)
             {
-                return $"Model: {this.Model}\nMemory:{this.Memory}\nScreen Size: {this.ScreenSize}\nSupported file formats: {this.SupportedFileFormats}\nConnectivity: {this.Connectivity}";
+                return $"Model: {this.Model}\nMemory:{this.Memory}\nScreen Size: {this.ScreenSize}\nSupported file formats: {this.SupportedFileFormats}\nConnectivity: {this.Connectivity}" + base.ToString();
             }
             else
             {

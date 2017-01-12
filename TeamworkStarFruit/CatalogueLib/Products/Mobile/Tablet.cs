@@ -9,23 +9,13 @@ namespace CatalogueLib.Products
 {
     class Tablet : Mobile
     {
-        public Tablet(int ID, decimal price, bool isAvailable, Brand brand) : base(ID, price, isAvailable, brand)
+        public Tablet(bool isAvailable, Brand brand) : base(isAvailable, brand)
         {
+            this.GPU = GPU;
+            this.OperatingSystem = OperatingSystem;
         }
 
-        public string Model
-        { get; private set; }
-
-        public int Memory
-        { get; private set; }
-
-        public double CPU
-        { get; private set; }
-
         public string GPU
-        { get; private set; }
-
-        public int RAM
         { get; private set; }
 
         public string OperatingSystem
@@ -35,7 +25,7 @@ namespace CatalogueLib.Products
         {
             if (this.isAvailable)
             {
-                return $"Model: {this.Model}\nScreen Size: {this.ScreenSize}\nMemory: {this.Memory}\nProcessor: {this.CPU}\nRAM: {this.RAM}\nPhone GPU: {this.GPU}\nOperating System: {this.OperatingSystem}\nConnectivity: {this.Connectivity}\nBattery: {this.Battery}";
+                return $"Model: {this.Model}\nScreen Size: {this.ScreenSize}\nMemory: {this.Memory}\nProcessor: {this.CPU}\nRAM: {this.RAM}\nPhone GPU: {this.GPU}\nOperating System: {this.OperatingSystem}\nConnectivity: {this.Connectivity}\nBattery: {this.Battery}" + base.ToString();
 
             }
             else

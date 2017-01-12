@@ -9,20 +9,13 @@ namespace CatalogueLib.Products
 {
     class SmartWatch : Mobile
     {
-        public SmartWatch(int ID, decimal price, bool isAvailable, Brand brand) : base(ID, price, isAvailable, brand)
+        public SmartWatch(bool isAvailable, Brand brand) : base(isAvailable, brand)
         {
+            this.Size = Size;
+            this.WaterResistance = WaterResistance;
         }
 
-        public string Model
-        { get; private set; }
-
         public double Size
-        { get; private set; }
-
-        public int Memory
-        { get; private set; }
-
-        public double CPU
         { get; private set; }
 
         public bool WaterResistance
@@ -32,7 +25,7 @@ namespace CatalogueLib.Products
         {
             if (this.isAvailable)
             {
-                return $"Model: {this.Model}\nSize:{this.Size}\nMemory: {this.Memory}\nProcessor: {this.CPU}\nWater resistance: {this.WaterResistance}";
+                return $"Model: {this.Model}\nSize:{this.Size}\nMemory: {this.Memory}\nProcessor: {this.CPU}\nWater resistance: {this.WaterResistance}" + base.ToString();
 
             }
             else

@@ -4,11 +4,30 @@ namespace CatalogueLib
 {
     public abstract class Mobile : Product
     {
-        public Mobile(int ID, decimal price, bool isAvailable, Brand brand)
-            : base(ID, price, isAvailable, brand)
+        public Mobile(bool isAvailable, Brand brand)
+            : base(isAvailable, brand)
         {
-
+            this.Memory = Memory;
+            this.CPU = CPU;
+            this.RAM = RAM;
+            this.Model = Model;
+            this.Battery = Battery;
+            this.Connectivity = Connectivity;
+            this.ExpandableMemory = ExpandableMemory;
+            this.ScreenSize = ScreenSize;
         }
+
+        public int Memory
+        { get; private set; }
+
+        public string CPU
+        { get; private set; }
+
+        public int RAM
+        { get; private set; }
+
+        public string Model
+        { get;  private set;}
 
         public string Battery
         { get; private set; }
@@ -27,8 +46,7 @@ namespace CatalogueLib
 
             if (this.isAvailable)
             {
-                return $"Brand: {this.brand}\nScreen size:{this.ScreenSize}\nExpandable memory: {this.ExpandableMemory}";
-
+                return $"Brand: {this.brand}\nModel:{this.Model}\nScreen size:{this.ScreenSize}\nMemory: {this.Memory}\nCPU: {this.CPU}\nRAM: {this.RAM} Expandable memory: {this.ExpandableMemory}\nBattery: {this.Battery}";
             }
             else
             {
