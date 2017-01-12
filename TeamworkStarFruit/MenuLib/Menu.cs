@@ -76,6 +76,11 @@ namespace MenuLib
             {
                 option = Console.ReadLine();
 
+                if(option == "")
+                {
+                    return;
+                }
+
                 switch (key)
                 {
                     //admin 
@@ -104,7 +109,8 @@ namespace MenuLib
                     Console.WriteLine("plese use the numbers in the brackets");
                     continue;
                 }
-                else if (!(Convert.ToChar(option) - '0' >= 0 && Convert.ToChar(option) - '0' <= bound))
+                else 
+                if (!(Convert.ToChar(option) - '0' >= 0 && Convert.ToChar(option) - '0' <= bound))
                 {
                     Console.WriteLine("Please use a digit which is in range between 1 and {0}", bound);
                     continue;
