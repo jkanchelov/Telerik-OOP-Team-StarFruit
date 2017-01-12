@@ -4,8 +4,8 @@ namespace CatalogueLib
 {
     public abstract class Computer : Product
     {
-        public Computer(decimal price, bool isAvailable, Brand brand, string CPU, int DriveMemory, string VideoCardModel, string OperationSystem, double ScreenSize, int RAM)
-            : base(price, isAvailable, brand)
+        public Computer(int ID, decimal price, bool isAvailable, Brand brand, string CPU, int DriveMemory, string VideoCardModel, string OperationSystem, double ScreenSize, int RAM)
+            : base(ID, price, isAvailable, brand)
         {
             this.CPU = CPU;
             this.DriveMemory = DriveMemory;

@@ -7,10 +7,10 @@ using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib.Products
 {
-    class VacuumCleaner : SmallAppliances
+    public class VacuumCleaner : SmallAppliances
     {
-        public VacuumCleaner(decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, double GarbageBagVolume)
-            : base(price, isAvailable, brand, Capacity, CableLength, Affixes)
+        public VacuumCleaner(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, double GarbageBagVolume)
+            : base(ID, price, isAvailable, brand, Capacity, CableLength, Affixes)
         {
             this.GarbageBagVolume = GarbageBagVolume;
         }

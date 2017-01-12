@@ -4,8 +4,8 @@ namespace CatalogueLib
 {
     public abstract class SmallAppliances : Product
     {
-        public SmallAppliances(decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes)
-            : base(price, isAvailable, brand)
+        public SmallAppliances(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes)
+            : base(ID, price, isAvailable, brand)
         {
             this.Capacity = Capacity;
             this.CableLength = CableLength;

@@ -4,8 +4,8 @@ namespace CatalogueLib
 {
     public abstract class Mobile : Product
     {
-        public Mobile(decimal price, bool isAvailable, Brand brand)
-            : base(price, isAvailable, brand)
+        public Mobile(int ID, decimal price, bool isAvailable, Brand brand)
+            : base(ID, price, isAvailable, brand)
         {
 
         }
