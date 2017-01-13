@@ -61,6 +61,7 @@
     <Compile Include="Products\SmallAppliances\HairDryer.cs" />
     <Compile Include="Products\SmallAppliances\Mixer.cs" />
     <Compile Include="Products\SmallAppliances\VacuumCleaner.cs" />
+    <Compile Include="Products\Struct\Battery.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Products\SmallAppliances.cs" />
   </ItemGroup>

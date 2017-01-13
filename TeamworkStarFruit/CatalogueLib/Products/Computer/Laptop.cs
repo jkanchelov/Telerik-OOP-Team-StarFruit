@@ -19,14 +19,9 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Ammount of USB ports: {this.HowManyUSBPorts}";
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
+
+                return base.ToString() + $"\nNumber of USB ports: {this.HowManyUSBPorts}";
+
 
         }
     }

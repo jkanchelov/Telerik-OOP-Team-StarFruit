@@ -1,22 +1,18 @@
 ﻿using CatalogueLib.Products.Enumerations;
+using CatalogueLib.Products.Struct;
 
 namespace CatalogueLib
 {
     public abstract class Mobile : Product
     {
-<<<<<<< HEAD
-        public Mobile(int ID, decimal price, bool isAvailable, Brand brand)
+        public Mobile(int ID, decimal price, bool isAvailable, Brand brand, int Memory,string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize)
             : base(ID, price, isAvailable, brand)
-=======
-        public Mobile(bool isAvailable, Brand brand)
-            : base(isAvailable, brand)
->>>>>>> master
         {
             this.Memory = Memory;
             this.CPU = CPU;
             this.RAM = RAM;
             this.Model = Model;
-            this.Battery = Battery;
+            this.battery = battery;
             this.Connectivity = Connectivity;
             this.ExpandableMemory = ExpandableMemory;
             this.ScreenSize = ScreenSize;
@@ -34,7 +30,7 @@ namespace CatalogueLib
         public string Model
         { get;  private set;}
 
-        public string Battery
+        public Battery battery
         { get; private set; }
 
         public string Connectivity
@@ -48,16 +44,7 @@ namespace CatalogueLib
 
         public override string ToString()
         {
-
-            if (this.isAvailable)
-            {
-                return $"Brand: {this.brand}\nModel:{this.Model}\nScreen size:{this.ScreenSize}\nMemory: {this.Memory}\nCPU: {this.CPU}\nRAM: {this.RAM} Expandable memory: {this.ExpandableMemory}\nBattery: {this.Battery}";
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
-
+                return base.ToString() + $"\nModel:{this.Model}\nScreen size:{this.ScreenSize}\nMemory: {this.Memory}\nCPU: {this.CPU}\nRAM: {this.RAM} Expandable memory: {this.ExpandableMemory}\nBattery: {this.battery}";
         }
 
     }

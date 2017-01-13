@@ -35,16 +35,7 @@ namespace CatalogueLib
 
         public override string ToString()
         {
-
-            if (this.isAvailable)
-            {
-                return $"Brand: {this.brand}\nCPU:{this.CPU}\nDrive Memory:{this.DriveMemory} megabytes\nVideo Card:{this.VideoCardModel}\nOperation System:{this.OperationSystem}\nScreen size:{this.ScreenSize} inches\nRAM:{this.RAM}";
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
-
+            return base.ToString() + $"\nCPU:{this.CPU}\nDrive Memory:{this.DriveMemory} megabytes\nVideo Card:{this.VideoCardModel}\nOperation System:{this.OperationSystem}\nScreen size:{this.ScreenSize} inches\nRAM:{this.RAM}";
         }
 
     }

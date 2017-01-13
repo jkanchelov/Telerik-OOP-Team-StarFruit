@@ -19,15 +19,7 @@ namespace CatalogueLib
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Brand: {this.brand}\nNumber of available products:{this.Count}\n Price: {this.Price}";
-
-            }
-            else
-            {
-                return $"Brand: {this.brand}\nPrice: {this.Price}\nProduct is not available at the moment.";
-            }
+                return $"\nBrand: {this.brand}\nProduct is available: {this.isAvailable}\n Price: {this.Price}";
         }
     }
 }

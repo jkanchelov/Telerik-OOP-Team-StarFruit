@@ -7,9 +7,10 @@ using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib.Products
 {
-    class Oven : BigAppliances
+    public class Oven : BigAppliances
     {
-        public Oven(bool isAvailable, Brand brand) : base(isAvailable, brand)
+        public Oven(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string ElectricOrGas) 
+            : base(ID, price, isAvailable, brand, Color, CountryOfBirth)
         {
             this.ElectricOrGas = ElectricOrGas;
         }
@@ -18,14 +19,7 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Electric or gas: {this.ElectricOrGas}" + base.ToString();
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
+                return base.ToString() + $"\nElectric or gas: {this.ElectricOrGas}";
         }
     }
 }

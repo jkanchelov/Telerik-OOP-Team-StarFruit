@@ -20,15 +20,7 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Has bowl: {this.HasBowl}";
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
-
+            return base.ToString() + $"\nHas a bowl: {this.HasBowl}";
         }
     }
 }

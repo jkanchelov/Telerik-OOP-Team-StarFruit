@@ -20,15 +20,7 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Garbage bag volume: {this.GarbageBagVolume}";
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
-
+                return base.ToString() + $"\nGarbage bag volume: {this.GarbageBagVolume}";
         }
     }
 }

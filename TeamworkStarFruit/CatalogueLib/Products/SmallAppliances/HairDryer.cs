@@ -20,15 +20,7 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Different speeds: {this.DifferentSpeeds}";
-
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
+                return base.ToString() + $"\nDifferent speeds: {this.DifferentSpeeds}";
         }
     }
 }

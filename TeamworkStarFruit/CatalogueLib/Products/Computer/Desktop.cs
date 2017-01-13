@@ -20,14 +20,9 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Has DVD recorder: {this.HasDVDRecorder}";
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
+
+            return base.ToString() + $"\nHas DVD recorder: {this.HasDVDRecorder}";
+
         }
     }
 }

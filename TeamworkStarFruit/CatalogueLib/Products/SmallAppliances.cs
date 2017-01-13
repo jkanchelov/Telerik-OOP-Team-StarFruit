@@ -23,16 +23,7 @@ namespace CatalogueLib
 
         public override string ToString()
         {
-
-            if (this.isAvailable)
-            {
-                return $"Capacity: {this.Capacity}\nCable length:{this.CableLength}\nAffixes: {this.Affixes}";
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
-
+                return base.ToString() + $"\nCapacity: {this.Capacity}\nCable length:{this.CableLength}\nAffixes: {this.Affixes}";
         }
     }
 }

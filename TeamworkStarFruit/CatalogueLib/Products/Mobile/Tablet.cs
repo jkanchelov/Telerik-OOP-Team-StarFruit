@@ -4,38 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CatalogueLib.Products.Enumerations;
+using CatalogueLib.Products.Struct;
 
 namespace CatalogueLib.Products
 {
-    class Tablet : Mobile
+    public class Tablet : Mobile
     {
-<<<<<<< HEAD
-        public Tablet(int ID, decimal price, bool isAvailable, Brand brand) : base(ID, price, isAvailable, brand)
-=======
-        public Tablet(bool isAvailable, Brand brand) : base(isAvailable, brand)
->>>>>>> master
+        public Tablet(int ID, decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize, double FrontCamera, double BackCamera, bool HasGPS)
+            : base(ID, price, isAvailable, brand, Memory, CPU, RAM, Model, battery, connectivity, ExpandableMemory, ScreenSize)
         {
-            this.GPU = GPU;
-            this.OperatingSystem = OperatingSystem;
+            this.FrontCamera = FrontCamera;
+            this.BackCamera = BackCamera;
+            this.HasGPS = HasGPS;
         }
 
-        public string GPU
-        { get; private set; }
+        public double FrontCamera { get; private set; }
 
-        public string OperatingSystem
-        { get; private set; }
+        public double BackCamera { get; private set; }
+
+        public bool HasGPS { get; private set; }
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Model: {this.Model}\nScreen Size: {this.ScreenSize}\nMemory: {this.Memory}\nProcessor: {this.CPU}\nRAM: {this.RAM}\nPhone GPU: {this.GPU}\nOperating System: {this.OperatingSystem}\nConnectivity: {this.Connectivity}\nBattery: {this.Battery}" + base.ToString();
-
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
+            return base.ToString() + $"\nFront camera: {this.FrontCamera} MP\nBack camera: {this.BackCamera} MP\n Tablet has GPS: {this.HasGPS}";
         }
     }
 }

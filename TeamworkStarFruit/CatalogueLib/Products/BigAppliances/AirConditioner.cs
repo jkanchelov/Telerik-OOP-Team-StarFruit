@@ -8,9 +8,10 @@ using CatalogueLib.Products.Enumerations;
 
 namespace CatalogueLib.Products
 {
-    class AirConditioner : BigAppliances
+    public class AirConditioner : BigAppliances
     {
-        public AirConditioner(bool isAvailable, Brand brand) : base(isAvailable, brand)
+        public AirConditioner(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string TypeOfSystem, bool HasWiFi)
+            : base(ID, price, isAvailable, brand, Color, CountryOfBirth)
         {
             this.TypeOfSystem = TypeOfSystem;
             this.HasWiFi = HasWiFi;
@@ -24,14 +25,7 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Type of air conditioning system: {this.TypeOfSystem}\nWiFi control:{this.HasWiFi}" + base.ToString();
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
+            return base.ToString() + $"\nType of air conditioning system: {this.TypeOfSystem}\nWiFi control:{this.HasWiFi}";
         }
     }
 }

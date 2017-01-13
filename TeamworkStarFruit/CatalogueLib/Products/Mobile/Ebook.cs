@@ -4,16 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CatalogueLib.Products.Enumerations;
+using CatalogueLib.Products.Struct;
 
 namespace CatalogueLib.Products
 {
     public class EBook : Mobile
     {
-<<<<<<< HEAD
-        public EBook(int ID, decimal price, bool isAvailable, Brand brand) : base(ID, price, isAvailable, brand)
-=======
-        public EBook(bool isAvailable, Brand brand) : base(isAvailable, brand)
->>>>>>> master
+        public EBook(int ID, decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize, string SupportedFileFormat)
+            : base(ID, price, isAvailable, brand, Memory, CPU, RAM, Model, battery, connectivity, ExpandableMemory, ScreenSize)
+
         {
             this.SupportedFileFormats = SupportedFileFormats;
         }
@@ -25,14 +24,7 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            if (this.isAvailable)
-            {
-                return $"Model: {this.Model}\nMemory:{this.Memory}\nScreen Size: {this.ScreenSize}\nSupported file formats: {this.SupportedFileFormats}\nConnectivity: {this.Connectivity}" + base.ToString();
-            }
-            else
-            {
-                return $"The selected product is not available at the moment.";
-            }
+            return base.ToString() + $"\nSupported file formats: {this.SupportedFileFormats}";
         }
     }
 }
