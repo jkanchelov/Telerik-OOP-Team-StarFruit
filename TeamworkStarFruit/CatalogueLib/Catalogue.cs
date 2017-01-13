@@ -1,12 +1,10 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
-using ExceptionLib;
-
-
-
-namespace CatalogueLib
+﻿namespace CatalogueLib
 {
+    using System.Linq;
+    using System.Collections.Generic;
+
+    using ExceptionLib;
+
     public class Catalogue : IChangeable, ISortable
     {
         public List<Product> catalogue { get; set; }

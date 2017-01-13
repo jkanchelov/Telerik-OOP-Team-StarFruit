@@ -1,7 +1,7 @@
-﻿using CatalogueLib.Products.Enumerations;
-
-namespace CatalogueLib
+﻿namespace CatalogueLib
 {
+    using CatalogueLib.Products.Enumerations;
+
     public abstract class Product
     {
         public decimal Price { get; private set; }
@@ -19,7 +19,7 @@ namespace CatalogueLib
 
         public override string ToString()
         {
-                return $"\nBrand: {this.brand}\nProduct is available: {this.isAvailable}\n Price: {this.Price}";
+            return $"\nBrand: {this.brand}\nProduct is available: {this.isAvailable}\n Price: {this.Price}";
         }
     }
 }

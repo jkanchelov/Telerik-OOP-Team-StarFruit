@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogueLib.Products.Enumerations;
-
-
-namespace CatalogueLib.Products
+﻿namespace CatalogueLib.Products
 {
+    using CatalogueLib.Products.Enumerations;
+
+
     public class AirConditioner : BigAppliances
     {
         public AirConditioner(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string TypeOfSystem, bool HasWiFi)
@@ -17,8 +12,8 @@ namespace CatalogueLib.Products
             this.HasWiFi = HasWiFi;
         }
 
-        public string TypeOfSystem
-        { get; private set; }
+        public string TypeOfSystem { get; private set; }
+
 
         public bool HasWiFi
         { get; private set; }

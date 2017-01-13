@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogueLib.Products.Enumerations;
-
-namespace CatalogueLib.Products
+﻿namespace CatalogueLib.Products
 {
+    using CatalogueLib.Products.Enumerations;
+
     public class VacuumCleaner : SmallAppliances
     {
         public VacuumCleaner(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, double GarbageBagVolume)
@@ -15,12 +10,12 @@ namespace CatalogueLib.Products
             this.GarbageBagVolume = GarbageBagVolume;
         }
 
-        public double GarbageBagVolume // in litres
-        { get; private set; }
+        // in litres
+        public double GarbageBagVolume { get; private set; }
 
         public override string ToString()
         {
-                return base.ToString() + $"\nGarbage bag volume: {this.GarbageBagVolume}";
+            return base.ToString() + $"\nGarbage bag volume: {this.GarbageBagVolume}";
         }
     }
 }

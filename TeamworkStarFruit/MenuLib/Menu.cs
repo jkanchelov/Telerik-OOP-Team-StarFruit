@@ -1,10 +1,11 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using CatalogueLib;
-
-namespace MenuLib
+﻿namespace MenuLib
 {
+    using System;
+    using System.Text;
+    using System.Collections.Generic;
+
+    using CatalogueLib;
+
     public class Menu
     {
         public static Dictionary<string, string> menuPages = new Dictionary<string, string>();

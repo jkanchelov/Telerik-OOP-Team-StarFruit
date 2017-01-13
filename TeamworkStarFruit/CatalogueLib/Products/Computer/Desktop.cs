@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogueLib.Products.Enumerations;
-
-namespace CatalogueLib.Products
+﻿namespace CatalogueLib.Products
 {
+    using CatalogueLib.Products.Enumerations;
+
     public class Desktop : Computer
     {
         public Desktop(int ID, decimal price, bool isAvailable, Brand brand, string CPU, int DriveMemory, string VideoCardModel, string OperationSystem, double ScreenSize, int RAM, bool HasDVDRecorder)
@@ -15,8 +10,7 @@ namespace CatalogueLib.Products
             this.HasDVDRecorder = HasDVDRecorder;
         }
 
-        public bool HasDVDRecorder
-        { get; private set; }
+        public bool HasDVDRecorder { get; private set; }
 
         public override string ToString()
         {

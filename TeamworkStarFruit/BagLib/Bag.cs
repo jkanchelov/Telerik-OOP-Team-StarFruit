@@ -1,11 +1,12 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-using CatalogueLib;
-using ExceptionLib;
-
-namespace BagLib
+﻿namespace BagLib
 {
+    using System;
+    using System.Text;
+    using System.Collections.Generic;
+
+    using CatalogueLib;
+    using ExceptionLib;
+
     public class Bag : IChangeable
     {
         public List<Product> productsInBag { get; set; }

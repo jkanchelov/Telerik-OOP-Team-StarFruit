@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace CatalogueLib
+﻿namespace CatalogueLib
 {
+    using System.Collections.Generic;
+
     public interface ISortable
     {
         IEnumerable<Product> ShowBigAppliances();

@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace ExceptionLib
+﻿namespace ExceptionLib
 {
+    using System;
+
     public class ProductNotFoundException : Exception
     {
         public ProductNotFoundException()

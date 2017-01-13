@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogueLib.Products.Enumerations;
-
-namespace CatalogueLib.Products
+﻿namespace CatalogueLib.Products
 {
+    using CatalogueLib.Products.Enumerations;
+
     public class Mixer : SmallAppliances
     {
         public Mixer(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, bool HasBowl)
@@ -15,8 +10,7 @@ namespace CatalogueLib.Products
             this.HasBowl = HasBowl;
         }
 
-        public bool HasBowl
-        { get; private set; }
+        public bool HasBowl { get; private set; }
 
         public override string ToString()
         {

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace FactoryLib.Utilities
+﻿namespace FactoryLib.Utilities
 {
+    using System.Threading;
+
     public class IDGenerator
     {
         private int id;

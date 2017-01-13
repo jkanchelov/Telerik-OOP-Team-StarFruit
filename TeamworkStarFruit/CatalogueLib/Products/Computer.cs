@@ -1,7 +1,7 @@
-﻿using CatalogueLib.Products.Enumerations;
-
-namespace CatalogueLib
+﻿namespace CatalogueLib
 {
+    using CatalogueLib.Products.Enumerations;
+
     public abstract class Computer : Product
     {
         public Computer(int ID, decimal price, bool isAvailable, Brand brand, string CPU, int DriveMemory, string VideoCardModel, string OperationSystem, double ScreenSize, int RAM)
@@ -15,23 +15,20 @@ namespace CatalogueLib
             this.RAM = RAM;
         }
 
-        public string CPU
-        { get; private set; }
+        public string CPU { get; private set; }
 
-        public int DriveMemory //in megabytes
-        { get; private set; }
+        //in megabytes
+        public int DriveMemory { get; private set; }
 
-        public string VideoCardModel
-        { get; private set; }
+        public string VideoCardModel { get; private set; }
 
-        public string OperationSystem
-        { get; private set; }
+        public string OperationSystem { get; private set; }
 
-        public double ScreenSize //in inches
-        { get; private set; }
+        //in inches
+        public double ScreenSize { get; private set; }
 
-        public int RAM //in gigs
-        { get; private set; }
+        //in gigs
+        public int RAM { get; private set; }
 
         public override string ToString()
         {

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CatalogueLib.Products.Enumerations;
-
-namespace CatalogueLib.Products
+﻿namespace CatalogueLib.Products
 {
+
+    using CatalogueLib.Products.Enumerations;
+
     public class Refrigerator : BigAppliances
     {
         public Refrigerator(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string TypeOfTechnology)
@@ -15,8 +11,7 @@ namespace CatalogueLib.Products
             this.TypeOfTechnology = TypeOfTechnology;
         }
 
-        public string TypeOfTechnology
-        { get; private set; }
+        public string TypeOfTechnology { get; private set; }
 
         public override string ToString()
         {
