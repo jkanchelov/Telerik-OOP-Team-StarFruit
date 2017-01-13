@@ -4,6 +4,10 @@
 
     public abstract class Computer : Product
     {
+        public Computer()
+        {
+
+        }
         public Computer(int ID, decimal price, bool isAvailable, Brand brand, string CPU, int DriveMemory, string VideoCardModel, string OperationSystem, double ScreenSize, int RAM)
             : base(ID, price, isAvailable, brand)
         {

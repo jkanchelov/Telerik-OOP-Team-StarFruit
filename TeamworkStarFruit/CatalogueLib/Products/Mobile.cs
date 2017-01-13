@@ -5,6 +5,11 @@
 
     public abstract class Mobile : Product
     {
+        public Mobile()
+        {
+
+        }
+
         public Mobile(int ID, decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize)
             : base(ID, price, isAvailable, brand)
         {

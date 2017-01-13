@@ -5,6 +5,11 @@
 
     public class AirConditioner : BigAppliances
     {
+        public AirConditioner()
+        {
+
+        }
+
         public AirConditioner(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string TypeOfSystem, bool HasWiFi)
             : base(ID, price, isAvailable, brand, Color, CountryOfBirth)
         {

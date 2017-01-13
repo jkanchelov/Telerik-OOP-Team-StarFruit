@@ -4,6 +4,11 @@
 
     public abstract class BigAppliances : Product
     {
+        public BigAppliances()
+        {
+
+        }
+
         public BigAppliances(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfOrigin)
             : base(ID, price, isAvailable, brand)
         {

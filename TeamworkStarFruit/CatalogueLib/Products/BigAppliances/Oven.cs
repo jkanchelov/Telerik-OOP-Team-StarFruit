@@ -5,6 +5,11 @@
 
     public class Oven : BigAppliances
     {
+        public Oven()
+        {
+
+        }
+
         public Oven(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string ElectricOrGas) 
             : base(ID, price, isAvailable, brand, Color, CountryOfBirth)
         {

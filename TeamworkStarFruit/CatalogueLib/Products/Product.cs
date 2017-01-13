@@ -9,6 +9,12 @@
         public int Count { get; private set; }
         public Brand brand { get; private set; }
         public int ID { get; private set; }
+
+        public Product()
+        {
+
+        }
+
         public Product(int ID, decimal price, bool isAvailable, Brand brand)
         {
             this.ID = ID;

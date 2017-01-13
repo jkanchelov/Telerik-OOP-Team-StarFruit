@@ -4,6 +4,11 @@
 
     public class HairDryer : SmallAppliances
     {
+        public HairDryer()
+        {
+
+        }
+
         public HairDryer(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, int DifferentSpeeds)
             : base(ID, price, isAvailable, brand, Capacity, CableLength, Affixes)
         {

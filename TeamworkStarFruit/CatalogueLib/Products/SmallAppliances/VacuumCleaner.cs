@@ -4,6 +4,11 @@
 
     public class VacuumCleaner : SmallAppliances
     {
+        public VacuumCleaner()
+        {
+
+        }
+
         public VacuumCleaner(int ID, decimal price, bool isAvailable, Brand brand, double Capacity, double CableLength, int Affixes, double GarbageBagVolume)
             : base(ID, price, isAvailable, brand, Capacity, CableLength, Affixes)
         {

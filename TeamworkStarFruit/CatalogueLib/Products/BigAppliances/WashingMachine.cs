@@ -4,6 +4,11 @@
 
     public class WashingMachine : BigAppliances
     {
+        public WashingMachine()
+        {
+
+        }
+
         public WashingMachine(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string LaundryCapacity, string MotorType) 
             : base(ID,price, isAvailable, brand, Color, CountryOfBirth)
         {

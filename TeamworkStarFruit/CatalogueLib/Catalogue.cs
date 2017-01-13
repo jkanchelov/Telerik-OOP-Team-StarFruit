@@ -5,6 +5,9 @@
 
     using ExceptionLib;
 
+    using Products.Enumerations;
+    using Products;
+
     public class Catalogue : IChangeable, ISortable
     {
         public List<Product> catalogue { get; set; }
@@ -40,6 +43,16 @@
         {
             return this.catalogue;
         }
+        
+        public IEnumerable<Product> Show(Product p)
+        {
+            //test
+
+            this.AddProduct(new Desktop(1, 2, true, Brand.DELL, "cpu", 33, "video", "os", 22, 33, true));
+            this.AddProduct(new Oven(2, 33, true, Brand.BEKO, "white", "bg", "el"));
+            var bigAppliances = this.catalogue.Where(x => x.GetType().Equals(p.GetType()));
+            return bigAppliances;
+        }
 
         public IEnumerable<Product> ShowBigAppliances()
         {
@@ -52,16 +65,16 @@
         public IEnumerable<Product> ShowComputers()
         {
             var computers = from product in this.catalogue
-                          where product is Computer
-                          select product;
+                            where product is Computer
+                            select product;
             return computers;
         }
 
         public IEnumerable<Product> ShowMobiles()
         {
             var mobiles = from product in this.catalogue
-                                where product is Mobile
-                                select product;
+                          where product is Mobile
+                          select product;
             return mobiles;
         }
 

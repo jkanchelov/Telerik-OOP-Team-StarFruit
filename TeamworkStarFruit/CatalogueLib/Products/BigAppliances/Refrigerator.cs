@@ -5,6 +5,11 @@
 
     public class Refrigerator : BigAppliances
     {
+        public Refrigerator()
+        {
+
+        }
+
         public Refrigerator(int ID, decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string TypeOfTechnology)
             : base(ID, price, isAvailable, brand, Color, CountryOfBirth)
         {
