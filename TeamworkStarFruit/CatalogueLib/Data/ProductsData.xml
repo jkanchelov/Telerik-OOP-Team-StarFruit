@@ -3,169 +3,172 @@
     <BigAppliances>
         <AirConditioner>
             <!--CountryOfBirth(origin)-->
-            <id></id>
-            <price></price>
-            <isAvailable></isAvailable>
-            <brand></brand>
-            <color></color>
-            <origin></origin>
-            <typeOfSystem></typeOfSystem>
-            <HasWiFi></HasWiFi>
+            <id>1</id>
+            <price>23</price>
+            <isAvailable>true</isAvailable>
+            <brand>SAMSUNG</brand>
+            <color>pink</color>
+            <origin>South Korea</origin>
+            <typeOfSystem>some system</typeOfSystem>
+            <HasWiFi>yes</HasWiFi>
         </AirConditioner>
         <Oven>
-            <id></id>
-            <price></price>
-            <isAvailable></isAvailable>
-            <brand></brand>
-            <color></color>
-            <origin></origin>
-            <electricOrGas></electricOrGas>
+            <id>2</id>
+            <price>44</price>
+            <isAvailable>true</isAvailable>
+            <brand>BOSCH</brand>
+            <color>inox</color>
+            <origin>some country</origin>
+            <electricOrGas>el</electricOrGas>
         </Oven>
         <Refrigerator>
-             <id></id>
-            <price></price>
-            <isAvailable></isAvailable>
-            <brand></brand>
-            <color></color>
-            <origin></origin>
-            <typeOfTechnology></typeOfTechnology>
+             <id>2</id>
+            <price>434</price>
+            <isAvailable>true</isAvailable>
+            <brand>SONY</brand>
+            <color>red</color>
+            <origin>some country</origin>
+            <typeOfTechnology>tech</typeOfTechnology>
         </Refrigerator>
         <WashingMachine>
-            <id></id>
-            <price></price>
-            <isAvailable></isAvailable>
-            <brand></brand>
-            <color></color>
-            <origin></origin>
-            <laundryCapacity></laundryCapacity>
-            <motorType></motorType>
+            <id>3</id>
+            <price>123</price>
+            <isAvailable>true</isAvailable>
+            <brand>SONY</brand>
+            <color>white</color>
+            <origin>fdfs</origin>
+            <laundryCapacity>3</laundryCapacity>
+            <motorType>some motor</motorType>
         </WashingMachine>
     </BigAppliances>
     <SmallAppliances>
        <HairDryer>
-         <id></id>
-         <price></price>
-         <isAvailable></isAvailable>
-         <brand></brand>
-         <capacity></capacity>
-         <cableLength></cableLength>
-         <affixes></affixes>
-         <differentSpeeds></differentSpeeds>
+         <id>4</id>
+         <price>42</price>
+         <isAvailable>true</isAvailable>
+         <brand>SONY</brand>
+         <capacity>3</capacity>
+         <cableLength>200</cableLength>
+         <affixes>2</affixes>
+         <differentSpeeds>yes</differentSpeeds>
        </HairDryer>
        <Mixer>
-           <id></id>
-         <price></price>
-         <isAvailable></isAvailable>
-         <brand></brand>
-         <capacity></capacity>
-         <cableLength></cableLength>
-         <affixes></affixes>
-         <hasBowl></hasBowl>
+           <id>5</id>
+         <price>55</price>
+         <isAvailable>true</isAvailable>
+         <brand>SONY</brand>
+         <capacity>5</capacity>
+         <cableLength>5</cableLength>
+         <affixes>3</affixes>
+         <hasBowl>i don't know :)</hasBowl>
        </Mixer>
        <VacuumCleaner>
-           <id></id>
-         <price></price>
-         <isAvailable></isAvailable>
-         <brand></brand>
-         <capacity></capacity>
-         <cableLength></cableLength>
-         <affixes></affixes>
-         <garbageBagVolume></garbageBagVolume>
+           <id>6</id>
+         <price>44</price>
+         <isAvailable>true</isAvailable>
+         <brand>SONY</brand>
+         <capacity>33</capacity>
+         <cableLength>2</cableLength>
+         <affixes>1</affixes>
+         <garbageBagVolume>3</garbageBagVolume>
        </VacuumCleaner>
     </SmallAppliances>
     <Mobile>
-        <!-- int ID, decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize, string SupportedFileFormat) -->
+        <!-- int ID, decimal price, bool isAvailable, Brand brand, int Memory, 
+        string CPU, int RAM, string Model, Battery battery,
+        string connectivity, bool ExpandableMemory,
+        double ScreenSize, string SupportedFileFormat) -->
        <Ebook>
-           <id></id>
-           <price></price>
-           <isAvailable></isAvailable>
-           <brand></brand>
-           <memory></memory>
-           <CPU></CPU>
-           <RAM></RAM>
-           <model></model>
-           <battery></battery>
-           <connectivity></connectivity>
-           <ExpandableMemory></ExpandableMemory>
-           <ScreenSize></ScreenSize>
-           <SupportedFileFormat></SupportedFileFormat>
+           <id>7</id>
+           <price>77</price>
+           <isAvailable>true</isAvailable>
+           <brand>SONY</brand>
+           <memory>555</memory>
+           <CPU>some cpu</CPU>
+           <RAM>666</RAM>
+           <model>some model</model>
+           <battery>lion</battery>
+           <connectivity>conected</connectivity>
+           <ExpandableMemory>true</ExpandableMemory>
+           <ScreenSize>22</ScreenSize>
+           <SupportedFileFormat>meny formats</SupportedFileFormat>
        </Ebook>
        <MobilePhone>
-           <id></id>
-           <price></price>
-           <isAvailable></isAvailable>
-           <brand></brand>
-           <memory></memory>
-           <CPU></CPU>
-           <RAM></RAM>
-           <model></model>
-           <battery></battery>
-           <connectivity></connectivity>
-           <ExpandableMemory></ExpandableMemory>
-           <ScreenSize></ScreenSize>
-           <GPU></GPU>
-           <OperatingSystem></OperatingSystem>
+           <id>8</id>
+           <price>88</price>
+           <isAvailable>true</isAvailable>
+           <brand>SONY</brand>
+           <memory>55</memory>
+           <CPU>bla bla</CPU>
+           <RAM>43434</RAM>
+           <model>cool model</model>
+           <battery>some batery</battery>
+           <connectivity>conection...</connectivity>
+           <ExpandableMemory>true</ExpandableMemory>
+           <ScreenSize>55</ScreenSize>
+           <GPU>gpppuuuu</GPU>
+           <OperatingSystem>unknown</OperatingSystem>
        </MobilePhone>
        <SmartWatch>
-           <id></id>
-           <price></price>
-           <isAvailable></isAvailable>
-           <brand></brand>
-           <memory></memory>
-           <CPU></CPU>
-           <RAM></RAM>
-           <model></model>
-           <battery></battery>
-           <connectivity></connectivity>
-           <ExpandableMemory></ExpandableMemory>
-           <ScreenSize></ScreenSize>
-           <size></size>
-           <waterResistance></waterResistance>
+           <id>9</id>
+           <price>99</price>
+           <isAvailable>true</isAvailable>
+           <brand>SONY</brand>
+           <memory>565</memory>
+           <CPU>pfff</CPU>
+           <RAM>2131</RAM>
+           <model>nice</model>
+           <battery>bbbat</battery>
+           <connectivity>ggg</connectivity>
+           <ExpandableMemory>true</ExpandableMemory>
+           <ScreenSize>66</ScreenSize>
+           <size>1</size>
+           <waterResistance>true</waterResistance>
        </SmartWatch>
        <Tablet>
-           <id></id>
-           <price></price>
-           <isAvailable></isAvailable>
-           <brand></brand>
-           <memory></memory>
-           <CPU></CPU>
-           <RAM></RAM>
-           <model></model>
-           <battery></battery>
-           <connectivity></connectivity>
-           <ExpandableMemory></ExpandableMemory>
-           <ScreenSize></ScreenSize>
-           <frontCamera></frontCamera>
-           <backCamera></backCamera>
-           <hasGPS></hasGPS>
+           <id>10</id>
+           <price>12</price>
+           <isAvailable>true</isAvailable>
+           <brand>SONY</brand>
+           <memory>22</memory>
+           <CPU>fsdf</CPU>
+           <RAM>21</RAM>
+           <model>ggg</model>
+           <battery>rrr</battery>
+           <connectivity>rgrg</connectivity>
+           <ExpandableMemory>true</ExpandableMemory>
+           <ScreenSize>44</ScreenSize>
+           <frontCamera>5</frontCamera>
+           <backCamera>5</backCamera>
+           <hasGPS>true</hasGPS>
        </Tablet>
     </Mobile>
     <Computers>
         <Desktop>
-            <id></id>
-            <price></price>
-            <isAvailable></isAvailable>
-            <brand></brand>
-            <CPU></CPU>
-            <driveMemory></driveMemory>
-            <videoCardModel></videoCardModel>
-            <operationSystem></operationSystem>
-            <screenSize></screenSize>
-            <RAM></RAM>
-            <hasDVDRecorder></hasDVDRecorder>
+            <id>11</id>
+            <price>4343</price>
+            <isAvailable>true</isAvailable>
+            <brand>SONY</brand>
+            <CPU>rgerg</CPU>
+            <driveMemory>444</driveMemory>
+            <videoCardModel>tttth</videoCardModel>
+            <operationSystem>oooo</operationSystem>
+            <screenSize>23</screenSize>
+            <RAM>555</RAM>
+            <hasDVDRecorder>true</hasDVDRecorder>
         </Desktop>
         <Laptop>
-            <id></id>
-            <price></price>
-            <isAvailable></isAvailable>
-            <brand></brand>
-            <CPU></CPU>
-            <driveMemory></driveMemory>
-            <videoCardModel></videoCardModel>
-            <operationSystem></operationSystem>
-            <screenSize></screenSize>
-            <RAM></RAM>
-            <howManyUSBPorts></howManyUSBPorts>
+            <id>12</id>
+            <price>2222</price>
+            <isAvailable>true</isAvailable>
+            <brand>SONY</brand>
+            <CPU>ffffff</CPU>
+            <driveMemory>3333333</driveMemory>
+            <videoCardModel>ggtgtg</videoCardModel>
+            <operationSystem>eeeeeeee</operationSystem>
+            <screenSize>16</screenSize>
+            <RAM>4444444</RAM>
+            <howManyUSBPorts>3</howManyUSBPorts>
         </Laptop>
     </Computers>
 </Product>
