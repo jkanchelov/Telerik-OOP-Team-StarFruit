@@ -26,10 +26,37 @@
             menuPages
                 .Add("111",
                 "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Back");
+            //Big Apl
+            menuPages.Add("1111", "----- Big Appliances ------\n" +
+                "(1) --> Air Conditioners\n(2) --> Ovens\n(3) --> Refrigerators\n" +
+                "(4) --> Washing Machines\n(5) --> Back.");
+            menuPages.Add("11111", "----- Air Conditioners ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11112", "----- Ovens ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11113", "----- Refrigerators ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11114", "----- Washing Machines ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+
+            //small Apl
+            menuPages.Add("1112", "----- small Appliances ------\n(1) --> Hair Dryers.\n(2) --> Mixers.\n(3) --> Vacuum Cleaners.(4)\n --> Back.");
+            menuPages.Add("11121", "----- Hair Dryers ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11122", "----- Mixers ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11123", "----- Vacuum Cleaners ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+
+            //mobiles
+            menuPages.Add("1113", "----- Mobiles ------\n"
+              + "(1) --> Ebooks\n(2) -->Mobile phones\n(3) --> Smart watches\n(4) --> Tablets\n(5) --> Back.");
+            menuPages.Add("11131", "----- Ebooks ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11132", "----- Mobile phones ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11133", "----- Smart watches ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11134", "----- Tablets ------\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            //Computers
+            menuPages.Add("1114", "----- Computers ------\n(1) --> Desktops\n(2) --> Laptops\n(3) --> Back.");
+            menuPages.Add("11141", "----- Desktops -----\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+            menuPages.Add("11142", "----- Laptops -----\n(1) --> Add new product.\n(2) --> Remove product by ID.\n(3) --> Back.");
+
 
             //customer
             menuPages.Add("12", "(1) --> Show categories.\n(2) --> Show your bag.\n(3) --> Back.");
-            menuPages.Add("121", "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Back");
+            menuPages.Add("121", "(1) --> Show Big Appliances.\n(2) --> Show Small Appliances.\n(3) --> Show Mobiles.\n(4) --> Show Computers.\n(5) --> Back.");
             //the product pages
             //need method to chek the id if it exist add it to bag.
 
@@ -106,13 +133,36 @@
                     case "1": bound = 3; break;
                     case "11": bound = 2; break;
                     case "111": bound = 5; break;
-                    
-                        //customer
+                        //product list
+                    case "1111": bound = 5; break;
+                    //Big Apl
+                    case "11111": bound = 3; break;
+                    case "11112": bound = 3; break;
+                    case "11113": bound = 3; break;
+                    case "11114": bound = 3; break;
+                    //small Apl
+                    case "1112": bound = 4; break;
+                    case "11121": bound = 3; break;
+                    case "11122": bound = 3; break;
+                    case "11123": bound = 3; break;
+                    //mobile
+                    case "1113": bound = 5; break;
+                    case "11131": bound = 3; break;
+                    case "11132": bound = 3; break;
+                    case "11133": bound = 3; break;
+                    case "11134": bound = 3; break;
+                    //computers
+                    case "1114": bound = 3; break;
+                    case "11141": bound = 3; break;
+                    case "11142": bound = 3; break;
+
+
+                    //customer
                     case "12": bound = 3; break;
                     case "121": bound = 5; break;
                         //products list
-                    //big apl
                     case "1211": bound = 6; break;
+                    //big apl
                     case "12111": bound = 3; break;
                     case "12112": bound = 3; break;
                     case "12113": bound = 3; break;
@@ -172,12 +222,109 @@
                     {
                         key = key + option.ToString();
                     }
-
+                    // admin
                     if (key == "11")
                     {
                         key = CheckPassword(key);
                         Menu.ShowMenu(key);
                     }
+                    //Big Apl
+                    //aie condition
+                    else if (key == "11111")
+                    {
+                        Menu.ShowMenu(key);
+                        AirConditioner ac = new AirConditioner();
+                        PrintProduct(ac);
+                    }
+                    //oven
+                    else if (key == "11112")
+                    {
+                        Menu.ShowMenu(key);
+                        Oven ov = new Oven();
+                        PrintProduct(ov);
+                    }
+                    //refrigerator
+                    else if (key == "11113")
+                    {
+                        Menu.ShowMenu(key);
+                        Refrigerator re = new Refrigerator();
+                        PrintProduct(re);
+                    }
+                    //washing machine
+                    else if (key == "11114")
+                    {
+                        Menu.ShowMenu(key);
+                        WashingMachine wm = new WashingMachine();
+                        PrintProduct(wm);
+                    }
+                    //smal apl
+                    //hair dryer
+                    else if (key == "11121")
+                    {
+                        Menu.ShowMenu(key);
+                        HairDryer hd = new HairDryer();
+                        PrintProduct(hd);
+                    }
+                    //mixer
+                    else if (key == "11122")
+                    {
+                        Menu.ShowMenu(key);
+                        Mixer mix = new Mixer();
+                        PrintProduct(mix);
+                    }
+                    //vacuum cleaner
+                    else if (key == "11123")
+                    {
+                        Menu.ShowMenu(key);
+                        VacuumCleaner vc = new VacuumCleaner();
+                        PrintProduct(vc);
+                    }
+                    //mobile
+                    //ebook
+                    else if (key == "11131")
+                    {
+                        Menu.ShowMenu(key);
+                        EBook eb = new EBook();
+                        PrintProduct(eb);
+                    }
+                    //mobile phone
+                    else if (key == "11132")
+                    {
+                        Menu.ShowMenu(key);
+                        MobilePhone mp = new MobilePhone();
+                        PrintProduct(mp);
+                    }
+                    //smart watch
+                    else if (key == "11133")
+                    {
+                        Menu.ShowMenu(key);
+                        SmartWatch sw = new SmartWatch();
+                        PrintProduct(sw);
+                    }
+                    //tablet
+                    else if (key == "11134")
+                    {
+                        Menu.ShowMenu(key);
+                        Tablet tab = new Tablet();
+                        PrintProduct(tab);
+                    }
+                    //computers
+                    //desktop
+                    else if (key == "11141")
+                    {
+                        Menu.ShowMenu(key);
+                        Desktop ds = new Desktop();
+                        PrintProduct(ds);
+                    }
+                    //laptop
+                    else if (key == "11142")
+                    {
+                        Menu.ShowMenu(key);
+                        Laptop lap = new Laptop();
+                        PrintProduct(lap);
+                    }
+
+
                     //customers nodes
 
                     //Air condition
@@ -208,13 +355,6 @@
                         WashingMachine wm = new WashingMachine();
                         PrintProduct(wm);
                     }
-                    //else if (key == "1212")
-                    //{
-                    //    //small apl
-                    //    Menu.ShowMenu(key);
-                    //    Console.WriteLine("small apl collection .. .");
-
-                    //}
                     //ebook
                     else if (key == "12131")
                     {
