@@ -10,7 +10,7 @@
 
         }
 
-        public Mobile(int ID, decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize)
+        public Mobile(int ID, decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, string battery, string connectivity, bool ExpandableMemory, double ScreenSize)
             : base(ID, price, isAvailable, brand)
         {
             this.Memory = Memory;
@@ -31,7 +31,7 @@
 
         public string Model { get; private set; }
 
-        public Battery battery { get; private set; }
+        public string battery { get; private set; }
 
         public string Connectivity { get; private set; }
 

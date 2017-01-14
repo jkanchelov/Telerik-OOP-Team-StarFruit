@@ -23,7 +23,7 @@
             return new Desktop(this.generator.GenerateID(), price, isAvailable, brand, CPU, DriveMemory, VideoCardModel, operationSystem, ScreenSize, RAM, HasDVDRecorder);
         }
 
-        public EBook CreateEbook(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize, string SupportedFileFormat)
+        public EBook CreateEbook(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, string battery, string connectivity, bool ExpandableMemory, double ScreenSize, string SupportedFileFormat)
         {
             return new EBook(this.generator.GenerateID(), price, isAvailable, brand, Memory, CPU, RAM, Model, battery, connectivity, ExpandableMemory, ScreenSize, SupportedFileFormat);
         }
@@ -43,7 +43,7 @@
             return new Mixer(this.generator.GenerateID(), price, isAvailable, brand, Capacity, CableLength, Affixes, HasBowl);
         }
 
-        public MobilePhone CreateMobilePhone(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize, string GPU, string OperatingSystem)
+        public MobilePhone CreateMobilePhone(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, string battery, string connectivity, bool ExpandableMemory, double ScreenSize, string GPU, string OperatingSystem)
         {
             return new MobilePhone(this.generator.GenerateID(), price, isAvailable, brand, Memory, CPU, RAM, Model, battery, connectivity, ExpandableMemory, ScreenSize, GPU, OperatingSystem);
         }
@@ -58,12 +58,12 @@
             return new Refrigerator(this.generator.GenerateID(), price, isAvailable, brand, Color, CountryOfBirth, TypeOfTechnology);
         }
 
-        public SmartWatch CreateSmartWatch(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize, double Size, bool WaterResistance)
+        public SmartWatch CreateSmartWatch(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, string battery, string connectivity, bool ExpandableMemory, double ScreenSize, double Size, bool WaterResistance)
         {
             return new SmartWatch(this.generator.GenerateID(), price, isAvailable, brand, Memory, CPU, RAM, Model, battery, connectivity, ExpandableMemory, ScreenSize, Size, WaterResistance);
         }
 
-        public Tablet CreateTablet(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, Battery battery, string connectivity, bool ExpandableMemory, double ScreenSize, double FrontCamera, double BackCamera, bool HasGPS)
+        public Tablet CreateTablet(decimal price, bool isAvailable, Brand brand, int Memory, string CPU, int RAM, string Model, string battery, string connectivity, bool ExpandableMemory, double ScreenSize, double FrontCamera, double BackCamera, bool HasGPS)
         {
             return new Tablet(this.generator.GenerateID(), price, isAvailable, brand, Memory, CPU, RAM, Model, battery, connectivity, ExpandableMemory, ScreenSize, FrontCamera, BackCamera, HasGPS);
         }
