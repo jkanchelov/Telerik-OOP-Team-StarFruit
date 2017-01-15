@@ -3,7 +3,6 @@
     using System;
     using System.Text;
     using System.Collections.Generic;
-
     using CatalogueLib;
     using ExceptionLib;
 
@@ -18,8 +17,7 @@
 
         public void AddProduct(Product product)
         {
-            throw new NotImplementedException();
-            // TO DO
+            this.productsInBag.Add(product);
         }
 
         public void RemoveProduct(int id)
@@ -43,6 +41,17 @@
         public void RemoveAll()
         {
             productsInBag.Clear();
+        }
+
+        public decimal Pay()
+        {
+            decimal sum = 0M;
+            foreach (var product in this.productsInBag)
+            {
+                sum += product.Price;
+            }
+            RemoveAll();
+            return sum;
         }
 
         public override string ToString()

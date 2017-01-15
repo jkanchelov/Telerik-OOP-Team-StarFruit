@@ -275,6 +275,18 @@
             catalogue.Add(product);
         }
 
+        public Product GetProductByID(int id)
+        {
+            foreach (var product in this.catalogue)
+            {
+                if (product.ID == id)
+                {
+                    return product;
+                }
+            }
+            throw new ProductNotFoundException();
+        }
+
         public void RemoveProduct(int id)
         {
             bool hasBeenRemoved = false;
