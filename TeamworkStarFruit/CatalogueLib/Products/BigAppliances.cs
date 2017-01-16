@@ -1,5 +1,6 @@
 ﻿namespace CatalogueLib
 {
+    using System.Text;
     using CatalogueLib.Products.Enumerations;
 
     public abstract class BigAppliances : Product
@@ -22,7 +23,11 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"Color: {this.Color}\nCountry of origin:{this.CountryOfOrigin}";
+            StringBuilder stroitel = new StringBuilder();
+            stroitel = stroitel.Append(string.Format("{0}", base.ToString()));
+            stroitel = stroitel.Append(string.Format(" Color: {0}\n Country of origin: {1}", this.Color, this.CountryOfOrigin));
+            return stroitel.AppendLine().ToString();
+           
         }
 
     }
