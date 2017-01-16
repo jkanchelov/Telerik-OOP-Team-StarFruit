@@ -28,15 +28,13 @@ This project was started because of the task from Telerik Academy for group proj
 Diagrams
 ------------
 For example this is a diagram for the CatalogueLib class.
-![image](https://cloud.githubusercontent.com/assets/25110077/21959105/cc7d82be-dac5-11e6-96f7-4eef8ca00f26.png)
+![try1](https://cloud.githubusercontent.com/assets/25110077/21980185/dfe9cab2-dbea-11e6-9a9e-ff1c61cff5ad.png)
 
 The other classes are similar to that. The project also has Exception class, Bag class, Catalogue class, Factory class,Menu class. 
 
 Tests
 -----------
-At present the tests are only for the class Catalogue. While this class is being tested we test also a lot of other classes. We've planned to make individual tests for other classes.
-
-![tests](https://cloud.githubusercontent.com/assets/25110077/21959015/9bd84286-dac3-11e6-8155-8a16c172dddd.png)
+At present there aren't any tests but we've planned to make tests for all classes.
 
 License
 ------------
