@@ -20,7 +20,7 @@
             //list = pc.Initialcatalog();
             //think about using only one obj of StringBuilder to pass the values to a dictionary 
             //or make objects for all categories
-          
+
             menuPages.Add("1", "(1) --> Enter like admin.\n(2) --> Enter like customer.\n(3) --> Exit.");
             //admin
             menuPages.Add("11", "(1) --> Show categories.\n(2) --> Back.");
@@ -64,38 +64,40 @@
             //Big Apl
             menuPages.Add("1211", "----- Big Appliances ------\n" +
                 "(1) --> Air Conditioners\n(2) --> Ovens\n(3) --> Refrigerators\n" +
-                "(4) --> Washing Machines\n(5) --> Show bag.\n(6) --> Back.");
+                "(4) --> Washing Machines\n(5) --> Back.");
 
-            menuPages.Add("12111", "----- Air Conditioners ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12112", "----- Ovens ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12113", "----- Refrigerators ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12114", "----- Washing Machines ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            menuPages.Add("12111", "----- Air Conditioners ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12112", "----- Ovens ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12113", "----- Refrigerators ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12114", "----- Washing Machines ------\n(1) --> Add to bag by ID\n(2) --> Back.");
 
 
             //small Apl
-            menuPages.Add("1212", "----- small Appliances ------\n(1) --> Hair Dryers\n(2) --> Mixers\n(3) --> Vacuum Cleaners(4)\n --> Show bag.\n(5) --> Back.");
-            menuPages.Add("12121", "----- Hair Dryers ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12122", "----- Mixers ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12123", "----- Vacuum Cleaners ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            menuPages.Add("1212", "----- small Appliances ------\n(1) --> Hair Dryers\n(2) --> Mixers\n(3) --> Vacuum Cleaners(4) --> Back.");
+            menuPages.Add("12121", "----- Hair Dryers ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12122", "----- Mixers ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12123", "----- Vacuum Cleaners ------\n(1) --> Add to bag by ID\n(2) --> Back.");
 
             //Mobiles
-            menuPages.Add("1213", "----- Mobiles ------\n" 
-               + "(1) --> Ebooks\n(2) -->Mobile phones\n(3) --> Smart watches\n(4) --> Tablets\n(5) --> Show bag.\n(6) --> Back.");
-            menuPages.Add("12131", "----- Ebooks ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12132", "----- Mobile phones ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12133", "----- Smart watches ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12134", "----- Tablets ------\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            menuPages.Add("1213", "----- Mobiles ------\n"
+               + "(1) --> Ebooks\n(2) -->Mobile phones\n(3) --> Smart watches\n(4) --> Tablets\n(5) --> Back.");
+            menuPages.Add("12131", "----- Ebooks ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12132", "----- Mobile phones ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12133", "----- Smart watches ------\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12134", "----- Tablets ------\n(1) --> Add to bag by ID\n(2) --> Back.");
 
             //Computers
-            menuPages.Add("1214", "----- Computers ------\n(1) --> Desktops\n(2) --> Laptops\n(3) --> Show bag\n(4) --> Back.");
-            menuPages.Add("12141", "----- Desktops -----\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
-            menuPages.Add("12142", "----- Laptops -----\n(1) --> Add to bag by ID\n(2) --> Show bag.\n(3) --> Back.");
+            menuPages.Add("1214", "----- Computers ------\n(1) --> Desktops\n(2) --> Laptops\n(3) --> Back.");
+            menuPages.Add("12141", "----- Desktops -----\n(1) --> Add to bag by ID\n(2) --> Back.");
+            menuPages.Add("12142", "----- Laptops -----\n(1) --> Add to bag by ID\n(2) --> Back.");
+
+            //bag
+            menuPages.Add("122", "(1) --> Pay\n(2) --> Remove product from bag by ID.\n(3) --> Back.");
 
 
 
 
-           
-            
+
 
         }
 
@@ -118,13 +120,13 @@
         public void Navigate()
         {
             string key = "1";
-            string option = ""; 
+            string option = "";
             int bound = 0;
             while (true)
             {
                 option = Console.ReadLine();
 
-                if(option == "")
+                if (option == "")
                 {
                     return;
                 }
@@ -135,7 +137,7 @@
                     case "1": bound = 3; break;
                     case "11": bound = 2; break;
                     case "111": bound = 5; break;
-                        //product list
+                    //product list
                     case "1111": bound = 5; break;
                     //Big Apl
                     case "11111": bound = 3; break;
@@ -162,36 +164,34 @@
                     //customer
                     case "12": bound = 3; break;
                     case "121": bound = 5; break;
-                        //products list
-                    case "1211": bound = 6; break;
+                    //products list
+                    case "1211": bound = 5; break;
                     //big apl
-                    case "12111": bound = 3; break;
-                    case "12112": bound = 3; break;
-                    case "12113": bound = 3; break;
-                    case "12114": bound = 3; break;
+                    case "12111": bound = 2; break;
+                    case "12112": bound = 2; break;
+                    case "12113": bound = 2; break;
+                    case "12114": bound = 2; break;
 
                     //small Apl
-                    case "1212": bound = 5; break;
-                    case "12121": bound = 3;break;
-                    case "12122": bound = 3; break;
-                    case "12123": bound = 3; break;
+                    case "1212": bound = 4; break;
+                    case "12121": bound = 2; break;
+                    case "12122": bound = 2; break;
+                    case "12123": bound = 2; break;
 
                     //mobiles
-                    case "1213": bound = 6; break;
-                    case "12131": bound = 3; break;
-                    case "12132": bound = 3; break;
-                    case "12133": bound = 3; break;
-                    case "12134": bound = 3; break;
+                    case "1213": bound = 5; break;
+                    case "12131": bound = 2; break;
+                    case "12132": bound = 2; break;
+                    case "12133": bound = 2; break;
+                    case "12134": bound = 2; break;
 
                     //computers
-                    case "1214": bound = 4; break;
-                    case "12141": bound = 3; break;
-                    case "12142": bound = 3; break;
+                    case "1214": bound = 3; break;
+                    case "12141": bound = 2; break;
+                    case "12142": bound = 2; break;
 
-                        //TO DO
-                        //1)add to bag
-
-                        //2) Show bag.
+                    //show bag "122"
+                    case "122": bound = 3; break;
 
                 }
 
@@ -201,15 +201,15 @@
                     Console.WriteLine("plese use the numbers in the brackets");
                     continue;
                 }
-                else 
+                else
                 if (!(Convert.ToChar(option) - '0' >= 0 && Convert.ToChar(option) - '0' <= bound))
                 {
                     Console.WriteLine("Please use a digit which is in range between 1 and {0}", bound);
                     continue;
                 }
-                else if(Convert.ToInt32(option) <= bound)
+                else if (Convert.ToInt32(option) <= bound)
                 {
-                    
+
                     if (Convert.ToInt32(option) == bound)
                     {
                         StringBuilder temp = new StringBuilder();
@@ -422,6 +422,16 @@
                         Laptop lap = new Laptop();
                         PrintProduct(lap);
                     }
+                    //bag
+                    else if (key == "122")
+                    {
+                        Menu.ShowMenu(key);
+                        Bag b = new Bag();
+                        Console.WriteLine("----- items in your bag -----");
+                        Console.WriteLine(b.ProductsInBag.Count == 0
+                                          ? "There are no items in the bag."
+                                          : b.ToString());
+                    }
 
                     else
                     {
@@ -458,6 +468,6 @@
                 Console.WriteLine("===========================================");
             }
         }
-       
+
     }
 }

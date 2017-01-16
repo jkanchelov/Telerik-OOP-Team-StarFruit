@@ -6,6 +6,8 @@
 
     using CatalogueLib;
     using ExceptionLib;
+    using CatalogueLib.Products;
+    using CatalogueLib.Products.Enumerations;
 
     public class Bag : IChangeable
     {
@@ -14,6 +16,9 @@
         public Bag()
         {
             this.ProductsInBag = new List<Product>();
+            //test the bag content
+            productsInBag.Add(new Laptop(44, 33, true, Brand.HP, "cpu", 3334, "video", "win", 22, 445, 6));
+
         }
 
         public ICollection<Product> ProductsInBag
@@ -72,7 +77,8 @@
             StringBuilder products = new StringBuilder();
             foreach (var product in productsInBag)
             {
-                products.AppendLine(product.ToString());
+                products.Append(product.ToString());
+
             }
             return products.ToString();
         }
