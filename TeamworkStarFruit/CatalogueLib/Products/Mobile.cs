@@ -41,7 +41,8 @@
         public double ScreenSize { get; private set; }
 
        public override string ToString()
-        {StringBuilder outline = new StringBuilder();
+        {
+            StringBuilder outline = new StringBuilder();
             outline = outline.Append(string.Format("{0}", base.ToString()));
             outline = outline.Append(string.Format(" Model: {0}",this.Model));
             outline = outline.AppendLine();

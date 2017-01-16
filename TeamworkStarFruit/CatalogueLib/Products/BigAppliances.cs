@@ -23,10 +23,12 @@
 
         public override string ToString()
         {
-            StringBuilder stroitel = new StringBuilder();
-            stroitel = stroitel.Append(string.Format("{0}", base.ToString()));
-            stroitel = stroitel.Append(string.Format(" Color: {0}\n Country of origin: {1}", this.Color, this.CountryOfOrigin));
-            return stroitel.AppendLine().ToString();
+            StringBuilder outline = new StringBuilder();
+            outline = outline.Append(string.Format("{0}", base.ToString()));
+            outline = outline.Append(string.Format(" Color: {0}", this.Color));
+            outline = outline.AppendLine();
+            outline = outline.Append(string.Format(" Made in: {0}", this.CountryOfOrigin));
+            return outline.AppendLine().ToString();
            
         }
 
