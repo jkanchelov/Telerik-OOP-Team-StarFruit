@@ -41,11 +41,22 @@
         public double ScreenSize { get; private set; }
 
        public override string ToString()
-        {
-            StringBuilder stroitel = new StringBuilder();
-            stroitel = stroitel.Append(string.Format("{0}", base.ToString()));
-            stroitel = stroitel.Append(string.Format(" Model: {0}\n Screen size: {1}\n Memory: {2}\n CPU: {3}\n RAM: {4}\n Expandable memory: {5}\n Battery: {6}",this.Model,this.ScreenSize,this.Memory,this.CPU,this.RAM, this.ExpandableMemory,this.battery));
-            return stroitel.AppendLine().ToString();
+        {StringBuilder outline = new StringBuilder();
+            outline = outline.Append(string.Format("{0}", base.ToString()));
+            outline = outline.Append(string.Format(" Model: {0}",this.Model));
+            outline = outline.AppendLine();
+            outline = outline.Append(string.Format(" Screen size: {0}",this.ScreenSize));
+            outline = outline.AppendLine();
+            outline = outline.Append(string.Format(" Memory: {0}",this.Memory));
+            outline = outline.AppendLine();
+            outline = outline.Append(string.Format(" CPU: {0}",this.CPU));
+            outline = outline.AppendLine();
+            outline = outline.Append(string.Format(" RAM: {0}",this.RAM));
+            outline = outline.AppendLine();
+            outline = outline.Append(string.Format(" Expandable memory: {0}",this.Memory));
+            outline = outline.AppendLine();
+            outline = outline.Append(string.Format(" Battery: {0}",this.battery));
+            return outline.AppendLine().ToString();
         }
 
     }
