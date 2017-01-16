@@ -26,11 +26,15 @@
         public int Affixes { get; private set; }
 
        public override string ToString()
-        {
-            StringBuilder stroitel = new StringBuilder();
-            stroitel = stroitel.Append(string.Format("{0}", base.ToString()));
-            stroitel = stroitel.Append(string.Format(" Capacity: {0}\n Cable length: {1}\n Affixes: {2}", this.Capacity, this.CableLength, this.Affixes));
-            return stroitel.AppendLine().ToString();
+        { 
+            StringBuilder result = new StringBuilder();
+            result = result.Append(string.Format("{0}", base.ToString()));
+            result = result.Append(string.Format(" Capacity: {0}",this.Capacity));
+            result = result.AppendLine();
+            result = result.Append(string.Format(" Cable length: {0}",this.CableLength));
+            result = result.AppendLine();
+            result = result.Append(string.Format(" Affixes: {0}", this.Affixes));
+            return result.AppendLine().ToString();
         }
     }
 }
