@@ -6,6 +6,7 @@
 
     using CatalogueLib;
     using CatalogueLib.Products;
+    using BagLib;
 
     public class Menu
     {
@@ -93,6 +94,7 @@
 
 
 
+           
             
 
         }

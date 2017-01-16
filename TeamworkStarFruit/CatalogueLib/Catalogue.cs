@@ -5,19 +5,30 @@
     using System.Collections.Generic;
 
     using ExceptionLib;
-
     using Products.Enumerations;
     using Products;
 
     public class Catalogue : IChangeable, ISortable
     {
         private XDocument xmldoc;
+        private IList<Product> catalogueList;
 
-        public List<Product> catalogue { get; set; }
         public Catalogue()
         {
-            this.catalogue = new List<Product>();
+            this.CatalogueList = new List<Product>();
             CatalogInitializer();
+        }
+
+        public IList<Product> CatalogueList
+        {
+            get
+            {
+                return new List<Product>(this.catalogueList);
+            }
+            private set
+            {
+                this.catalogueList = value;
+            }
         }
 
 
@@ -43,7 +54,6 @@
                 ));
             foreach (var item in airConditions)
             {
-                //or this.cataloge.Add(item);
                 AddProduct(item);
             }
 
@@ -272,12 +282,12 @@
 
         public void AddProduct(Product product)
         {
-            catalogue.Add(product);
+            this.catalogueList.Add(product);
         }
 
         public Product GetProductByID(int id)
         {
-            foreach (var product in this.catalogue)
+            foreach (var product in this.catalogueList)
             {
                 if (product.ID == id)
                 {
@@ -290,11 +300,11 @@
         public void RemoveProduct(int id)
         {
             bool hasBeenRemoved = false;
-            foreach (var product in this.catalogue)
+            foreach (var product in this.catalogueList)
             {
                 if (product.ID == id)
                 {
-                    catalogue.Remove(product);
+                    catalogueList.Remove(product);
                     hasBeenRemoved = true;
                     break;
                 }
@@ -312,13 +322,13 @@
         /// <returns>filtered collection</returns>
         public IEnumerable<Product> Show(Product p)
         {
-            var bigAppliances = this.catalogue.Where(x => x.GetType().Equals(p.GetType()));
+            var bigAppliances = this.CatalogueList.Where(x => x.GetType().Equals(p.GetType()));
             return bigAppliances;
         }
 
         public void RemoveAll()
         {
-            this.catalogue.Clear();
+            this.CatalogueList.Clear();
         }
     }
 }

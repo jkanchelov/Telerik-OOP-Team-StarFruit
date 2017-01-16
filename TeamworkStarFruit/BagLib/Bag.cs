@@ -3,16 +3,29 @@
     using System;
     using System.Text;
     using System.Collections.Generic;
+
     using CatalogueLib;
     using ExceptionLib;
 
     public class Bag : IChangeable
     {
-        public List<Product> productsInBag { get; set; }
+        private ICollection<Product> productsInBag;
 
         public Bag()
         {
-            this.productsInBag = new List<Product>();
+            this.ProductsInBag = new List<Product>();
+        }
+
+        public ICollection<Product> ProductsInBag
+        {
+            get
+            {
+                return new List<Product>(this.productsInBag);
+            }
+            private set
+            {
+                this.productsInBag = value;
+            }
         }
 
         public void AddProduct(Product product)

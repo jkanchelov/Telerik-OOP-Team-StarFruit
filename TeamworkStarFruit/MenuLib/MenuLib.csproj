@@ -44,6 +44,10 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BagLib\BagLib.csproj">
+      <Project>{d9292d92-0955-44b6-b034-c01fa483d8ec}</Project>
+      <Name>BagLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CatalogueLib\CatalogueLib.csproj">
       <Project>{aae64ff6-4106-47a6-8686-89b124fc902e}</Project>
       <Name>CatalogueLib</Name>

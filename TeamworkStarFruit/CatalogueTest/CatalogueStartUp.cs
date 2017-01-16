@@ -4,11 +4,13 @@
 
     public class CatalogueStartUp
     {
+        private const string initialPageInMenu = "1";
+
         static void Main()
         {
             Menu m = new Menu();
             Menu.CreateMenu();
-            Menu.ShowMenu("1");
+            Menu.ShowMenu(initialPageInMenu);
             m.Navigate();
         }
     }
