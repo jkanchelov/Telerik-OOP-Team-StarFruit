@@ -2,6 +2,7 @@
 {
 
     using CatalogueLib.Products.Enumerations;
+    using System.Text;
 
     public class Refrigerator : BigAppliances
     {
@@ -20,7 +21,11 @@
 
         public override string ToString()
         {
-                return base.ToString() + $"\nType of coolong system: {this.TypeOfTechnology}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Type of cooling system: {this.TypeOfTechnology}");
+
+            return output.ToString();
         }
     }
 }

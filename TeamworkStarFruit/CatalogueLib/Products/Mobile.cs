@@ -42,22 +42,17 @@
 
        public override string ToString()
         {
-            StringBuilder outline = new StringBuilder();
-            outline = outline.Append(string.Format("{0}", base.ToString()));
-            outline = outline.Append(string.Format(" Model: {0}",this.Model));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Screen size: {0}",this.ScreenSize));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Memory: {0}",this.Memory));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" CPU: {0}",this.CPU));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" RAM: {0}",this.RAM));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Expandable memory: {0}",this.Memory));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Battery: {0}",this.battery));
-            return outline.AppendLine().ToString();
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Model: {this.Model}");
+            output.AppendLine($"Screen size: {this.ScreenSize}\"");
+            output.AppendLine($"Memory: {this.Memory} GB");
+            output.AppendLine($"CPU: {this.CPU} GHz");
+            output.AppendLine($"RAM: {this.RAM} GB");
+            output.AppendLine($"Expandable memory: {this.Memory} GB");
+            output.AppendLine($"Battery: {this.battery}");
+
+            return output.ToString();
         }
 
     }

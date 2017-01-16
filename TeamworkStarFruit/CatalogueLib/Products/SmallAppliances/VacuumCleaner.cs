@@ -1,6 +1,7 @@
 ﻿namespace CatalogueLib.Products
 {
     using CatalogueLib.Products.Enumerations;
+    using System.Text;
 
     public class VacuumCleaner : SmallAppliances
     {
@@ -20,7 +21,11 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nGarbage bag volume: {this.GarbageBagVolume}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Garbage bag volume: {this.GarbageBagVolume}");
+
+            return output.ToString();
         }
     }
 }

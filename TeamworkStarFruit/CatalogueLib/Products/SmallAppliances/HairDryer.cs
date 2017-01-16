@@ -1,6 +1,7 @@
 ﻿namespace CatalogueLib.Products
 {
     using CatalogueLib.Products.Enumerations;
+    using System.Text;
 
     public class HairDryer : SmallAppliances
     {
@@ -19,7 +20,11 @@
 
         public override string ToString()
         {
-                return base.ToString() + $"\nDifferent speeds: {this.DifferentSpeeds}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Number of different speeds: {this.DifferentSpeeds}");
+
+            return output.ToString();
         }
     }
 }

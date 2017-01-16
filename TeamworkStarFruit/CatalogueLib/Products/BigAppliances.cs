@@ -23,13 +23,13 @@
 
         public override string ToString()
         {
-            StringBuilder outline = new StringBuilder();
-            outline = outline.Append(string.Format("{0}", base.ToString()));
-            outline = outline.Append(string.Format(" Color: {0}", this.Color));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Made in: {0}", this.CountryOfOrigin));
-            return outline.AppendLine().ToString();
-           
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Color: {this.Color}");
+            output.AppendLine($"Made in: {this.CountryOfOrigin}");
+
+            return output.ToString();
+
         }
 
     }

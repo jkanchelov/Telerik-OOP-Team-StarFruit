@@ -1,6 +1,7 @@
 ﻿namespace CatalogueLib.Products
 {
     using CatalogueLib.Products.Enumerations;
+    using System.Text;
 
     public class Mixer : SmallAppliances
     {
@@ -19,7 +20,11 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nHas a bowl: {this.HasBowl}";
+            StringBuilder output = new StringBuilder();
+            output.AppendLine(base.ToString());
+            output.AppendLine(string.Format("Has a bowl: {0}", this.HasBowl ? "Yes" : "No"));
+
+            return output.ToString();
         }
     }
 }

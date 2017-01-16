@@ -29,7 +29,12 @@ namespace CatalogueLib.Products
 
         public override string ToString()
         {
-            return base.ToString() + $"\nPhone GPU: {this.GPU}\nOperating System: {this.OperatingSystem}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"GPU: {this.GPU}");
+            output.AppendLine($"Operating system: {this.OperatingSystem}");
+
+            return output.ToString();
         }
     }
 }

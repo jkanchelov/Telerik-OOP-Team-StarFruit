@@ -2,6 +2,7 @@
 {
     using CatalogueLib.Products.Enumerations;
     using CatalogueLib.Products.Struct;
+    using System.Text;
 
     public class Tablet : Mobile
     {
@@ -26,7 +27,13 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nFront camera: {this.FrontCamera} MP\nBack camera: {this.BackCamera} MP\n Tablet has GPS: {this.HasGPS}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Front camera: {this.FrontCamera} MP");
+            output.AppendLine($"Back camera: {this.BackCamera} MP");
+            output.AppendLine(string.Format("Has GPS: {0}", this.HasGPS ? "Yes" : "No"));
+
+            return output.ToString();
         }
     }
 }

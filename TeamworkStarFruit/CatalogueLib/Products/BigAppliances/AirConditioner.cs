@@ -1,7 +1,7 @@
 ﻿namespace CatalogueLib.Products
 {
     using CatalogueLib.Products.Enumerations;
-
+    using System.Text;
 
     public class AirConditioner : BigAppliances
     {
@@ -25,7 +25,12 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nType of air conditioning system: {this.TypeOfSystem}\nWiFi control:{this.HasWiFi}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Type of air conditioning system: {this.TypeOfSystem}");
+            output.AppendLine(string.Format("Has WiFi control: {0}", this.HasWiFi ? "Yes" : "No"));
+
+            return output.ToString();
         }
     }
 }

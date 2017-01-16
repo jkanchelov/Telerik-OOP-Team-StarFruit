@@ -37,21 +37,17 @@
 
         public override string ToString()
         {
-            
-            StringBuilder outline = new StringBuilder();
-            outline = outline.Append(string.Format("{0}", base.ToString()));
-            outline = outline.Append(string.Format(" CPU: {0}", this.CPU));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Drive Memory: {0} megabytes", this.DriveMemory));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Video Card: {0}", this.VideoCardModel));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Operation System: {0}", this.OperationSystem));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" Screen size: {0} inches", this.ScreenSize));
-            outline = outline.AppendLine();
-            outline = outline.Append(string.Format(" RAM: {0}", this.RAM));
-            return outline.AppendLine().ToString();
+
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"CPU: {this.CPU} GHz");
+            output.AppendLine($"Drive Memory: {this.DriveMemory} GB");
+            output.AppendLine($"Video Card: {this.VideoCardModel}");
+            output.AppendLine($"Operation System: {this.OperationSystem}");
+            output.AppendLine($"Screen size: {this.ScreenSize}\"");
+            output.AppendLine($"RAM: {this.RAM} GB");
+
+            return output.ToString();
         }
 
     }
