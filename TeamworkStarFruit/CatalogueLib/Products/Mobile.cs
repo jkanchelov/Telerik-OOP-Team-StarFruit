@@ -2,6 +2,7 @@
 {
     using CatalogueLib.Products.Enumerations;
     using CatalogueLib.Products.Struct;
+    using System.Text;
 
     public abstract class Mobile : Product
     {
@@ -39,9 +40,12 @@
 
         public double ScreenSize { get; private set; }
 
-        public override string ToString()
+       public override string ToString()
         {
-            return base.ToString() + $"\nModel:{this.Model}\nScreen size:{this.ScreenSize}\nMemory: {this.Memory}\nCPU: {this.CPU}\nRAM: {this.RAM} Expandable memory: {this.ExpandableMemory}\nBattery: {this.battery}";
+            StringBuilder stroitel = new StringBuilder();
+            stroitel = stroitel.Append(string.Format("{0}", base.ToString()));
+            stroitel = stroitel.Append(string.Format(" Model: {0}\n Screen size: {1}\n Memory: {2}\n CPU: {3}\n RAM: {4}\n Expandable memory: {5}\n Battery: {6}",this.Model,this.ScreenSize,this.Memory,this.CPU,this.RAM, this.ExpandableMemory,this.battery));
+            return stroitel.AppendLine().ToString();
         }
 
     }
