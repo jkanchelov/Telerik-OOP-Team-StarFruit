@@ -40,7 +40,7 @@
         /// </summary>
         private void CatalogInitializer()
         {
-            xmldoc = XDocument.Load(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");   //add xml document  
+            xmldoc = XDocument.Load("./ProductsData.xml");   //add xml document  
             var airConditions = xmldoc.Descendants("AirConditioner")
                 .Select(p => new AirConditioner(
                 int.Parse(p.Element("id").Value),
