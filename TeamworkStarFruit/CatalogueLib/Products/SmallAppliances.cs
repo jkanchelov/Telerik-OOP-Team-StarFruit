@@ -1,6 +1,8 @@
 ﻿namespace CatalogueLib
 {
+    using System.Text;
     using CatalogueLib.Products.Enumerations;
+     
 
     public abstract class SmallAppliances : Product
     {
