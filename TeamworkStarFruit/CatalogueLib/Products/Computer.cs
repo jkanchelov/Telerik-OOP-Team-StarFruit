@@ -1,5 +1,6 @@
 ﻿namespace CatalogueLib
 {
+    using System.Text;
     using CatalogueLib.Products.Enumerations;
 
     public abstract class Computer : Product
@@ -36,7 +37,10 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nCPU:{this.CPU}\nDrive Memory:{this.DriveMemory} megabytes\nVideo Card:{this.VideoCardModel}\nOperation System:{this.OperationSystem}\nScreen size:{this.ScreenSize} inches\nRAM:{this.RAM}";
+            StringBuilder stroitel = new StringBuilder();
+            stroitel = stroitel.Append(string.Format("{0}", base.ToString()));
+            stroitel = stroitel.Append(string.Format(" CPU: {0}\n Drive Memory: {1} megabytes\n Video Card: {2}\n Operation System: {3}\n Screen size: {4} inches\n RAM: {5}",this.CPU, this.DriveMemory, this.VideoCardModel, this.OperationSystem, this.ScreenSize, this.RAM));
+            return stroitel.AppendLine().ToString();
         }
 
     }
