@@ -23,9 +23,12 @@
 
         public int Affixes { get; private set; }
 
-        public override string ToString()
+       public override string ToString()
         {
-            return base.ToString() + $"\nCapacity: {this.Capacity}\nCable length:{this.CableLength}\nAffixes: {this.Affixes}";
+            StringBuilder stroitel = new StringBuilder();
+            stroitel = stroitel.Append(string.Format("{0}", base.ToString()));
+            stroitel = stroitel.Append(string.Format(" Capacity: {0}\n Cable length: {1}\n Affixes: {2}", this.Capacity, this.CableLength, this.Affixes));
+            return stroitel.AppendLine().ToString();
         }
     }
 }
