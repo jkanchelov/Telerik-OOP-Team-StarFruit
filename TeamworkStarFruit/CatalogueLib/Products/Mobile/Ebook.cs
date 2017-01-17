@@ -2,6 +2,7 @@
 {
     using CatalogueLib.Products.Enumerations;
     using CatalogueLib.Products.Struct;
+    using System.Text;
 
     public class EBook : Mobile
     {
@@ -21,7 +22,11 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nSupported file formats: {this.SupportedFileFormats}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Supported file formats: {this.SupportedFileFormats}");
+
+            return output.ToString();
         }
     }
 }

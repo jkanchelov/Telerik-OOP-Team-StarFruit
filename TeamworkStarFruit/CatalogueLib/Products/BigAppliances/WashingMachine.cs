@@ -1,6 +1,7 @@
 ﻿namespace CatalogueLib.Products
 {
     using CatalogueLib.Products.Enumerations;
+    using System.Text;
 
     public class WashingMachine : BigAppliances
     {
@@ -22,7 +23,12 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nType of motor: {this.MotorType}\nLaundry capacity: {this.LaundryCapacity}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Type of motor: {this.MotorType}");
+            output.AppendLine($"Laundry capacity: {this.LaundryCapacity}");
+
+            return output.ToString();
         }
     }
 }

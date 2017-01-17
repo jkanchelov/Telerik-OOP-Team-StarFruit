@@ -2,6 +2,7 @@
 {
 
     using CatalogueLib.Products.Enumerations;
+    using System.Text;
 
     public class Laptop : Computer
     {
@@ -19,7 +20,11 @@
 
         public override string ToString()
         {
-                return base.ToString() + $"\nNumber of USB ports: {this.HowManyUSBPorts}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Number of USB ports: {this.HowManyUSBPorts}");
+
+            return output.ToString();
         }
     }
 }

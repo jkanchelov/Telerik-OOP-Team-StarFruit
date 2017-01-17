@@ -27,14 +27,13 @@
 
        public override string ToString()
         { 
-            StringBuilder result = new StringBuilder();
-            result = result.Append(string.Format("{0}", base.ToString()));
-            result = result.Append(string.Format(" Capacity: {0}",this.Capacity));
-            result = result.AppendLine();
-            result = result.Append(string.Format(" Cable length: {0}",this.CableLength));
-            result = result.AppendLine();
-            result = result.Append(string.Format(" Affixes: {0}", this.Affixes));
-            return result.AppendLine().ToString();
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Capacity: {this.Capacity}");
+            output.AppendLine($"Cable length: {this.CableLength}");
+            output.Append($"Affixes: {this.Affixes}");
+
+            return output.ToString();
         }
     }
 }

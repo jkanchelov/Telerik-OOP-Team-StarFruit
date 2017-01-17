@@ -2,6 +2,7 @@
 {
     using CatalogueLib.Products.Enumerations;
     using CatalogueLib.Products.Struct;
+    using System.Text;
 
     public class SmartWatch : Mobile
     {
@@ -23,7 +24,12 @@
 
         public override string ToString()
         {
-            return base.ToString() + $"\nSize: {this.Size}\nWater resistance: {this.WaterResistance}";
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine($"Size: {this.Size}");
+            output.AppendLine($"Water resistance: {this.WaterResistance}");
+
+            return output.ToString();
         }
     }
 }

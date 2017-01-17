@@ -30,10 +30,11 @@
             StringBuilder output = new StringBuilder();
             output.Append('-', 42);
             output.AppendLine();
-            output.AppendLine(string.Format("ID:[{0}] Brand:{1} available:{2} Price:{3}",
-                this.ID,this.Brand,
-                this.IsAvailable == true?"Yes":"No",
-                this.Price));
+            output.AppendLine($"ID: [{this.ID}]");
+            output.AppendLine($"Brand: {this.Brand}");
+            output.AppendLine(string.Format("Available: {0}",this.IsAvailable == true ? "Yes":"No"));
+            output.AppendLine($"Price: {this.Price}");
+
             return output.ToString();
         }
     }

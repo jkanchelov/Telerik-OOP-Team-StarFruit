@@ -1,6 +1,7 @@
 ﻿namespace CatalogueLib.Products
 {
     using CatalogueLib.Products.Enumerations;
+    using System.Text;
 
     public class Desktop : Computer
     {
@@ -18,9 +19,11 @@
 
         public override string ToString()
         {
+            StringBuilder output = new StringBuilder();
+            output.Append(base.ToString());
+            output.AppendLine(string.Format("Has DVD recorder: {0}", this.HasDVDRecorder ? "Yes" : "No"));
 
-            return base.ToString() + $"\nHas DVD recorder: {this.HasDVDRecorder}";
-
+            return output.ToString();
         }
     }
 }
