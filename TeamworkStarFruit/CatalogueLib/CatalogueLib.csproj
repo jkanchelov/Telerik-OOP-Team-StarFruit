@@ -71,7 +71,13 @@
       <Name>ExceptionLib</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Products\BigAppliances\BA_ClassDiagram.cd" />
+    <None Include="Products\Computer\C_ClassDiagram.cd" />
+    <None Include="Products\Mobile\M_ClassDiagram.cd" />
+    <None Include="Products\Products_ClassDiagram.cd" />
+    <None Include="Products\SmallAppliances\SA_ClassDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
