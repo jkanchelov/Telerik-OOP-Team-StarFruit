@@ -31,8 +31,14 @@ The final step of shopping is paying. The customer receive the bill and the appl
 **Class Diagram**
 ------------
 This diagram shows the basic hierarchy of classes. The base class is Product and it is inherited by the four sub-base classes that represent the main product groups. All other classes inherit them. The project also has an Exception class, a Bag class, a Catalogue class, a Factory class and a Menu class.
-![try1](https://cloud.githubusercontent.com/assets/25110077/21980185/dfe9cab2-dbea-11e6-9a9e-ff1c61cff5ad.png)
+
+
 ![image](/imgs/Product_classDiagram.jpg)
+![image](/imgs/BA_classDiagram.jpg)
+![image](/imgs/SA-classDiagram.jpg)
+![image](/imgs/M_classDiagram.jpg)
+![image](/imgs/C_classDiagram.jpg)
+
 
 **Tests**
 -----------
