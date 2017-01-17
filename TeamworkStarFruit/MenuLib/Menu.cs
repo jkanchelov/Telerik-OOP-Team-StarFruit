@@ -445,6 +445,14 @@
                         Menu.ShowMenu(key);
                     }
 
+                    //remove by ID
+                    else if (key == "111112")
+                    {
+                        AirConditioner a = new AirConditioner();
+                        Remove(a);
+                        key = "11111";
+                        Menu.ShowMenu(key);
+                    }
                     else
                     {
                         Menu.ShowMenu(key);
@@ -453,12 +461,26 @@
             }
         }
 
+        private void Remove(Product prod)
+        {
+            Console.Write("Enter the ID:");
+            int id = int.Parse(Console.ReadLine());
+            Catalogue c = new Catalogue();
+            switch (prod.GetType().Name)
+            {
+                case "AirConditioner":
+                    AirConditioner pType = new AirConditioner();
+                    c.RemoveProduct(id, pType);
+                    break;
+                
+            }
+        }
+
         private void InsertAirConditioner()
         {
             Catalogue c = new Catalogue();
+            Factory f = new Factory();
 
-            IDGenerator genId = new IDGenerator();
-            Factory f = new Factory(genId);
             Console.Write("Enter the price:");
             decimal price = decimal.Parse(Console.ReadLine());
             bool isAv = true;
@@ -473,9 +495,10 @@
             Console.Write("Enter if has WiFi (yes or no)");
             string wf = Console.ReadLine();
             bool hasWiFi = wf == "Yes" ? true : false;
+
             var air = f.CreateAirConditioner(price, isAv, brand, color, origin, type, hasWiFi);
             Console.WriteLine("Press Enter to submit");
-            c.InsertInXml(air);
+            c.InsertAirConditionerInXml(air);
             
             
         }

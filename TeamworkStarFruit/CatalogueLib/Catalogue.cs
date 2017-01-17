@@ -281,7 +281,7 @@
             }
         }
 
-        public void InsertInXml(AirConditioner air)
+        public void InsertAirConditionerInXml(AirConditioner air)
         {
             XElement airCond = new XElement("AirConditioner",
                     new XElement("id", air.ID),
@@ -292,10 +292,8 @@
                     new XElement("origin", air.CountryOfOrigin),
                     new XElement("typeOfSystem", air.TypeOfSystem),
                     new XElement("HasWiFi", air.HasWiFi));
-            //xmldoc.Root.Element("BigAppliances");
             xmldoc.Root.Add(airCond);
             xmldoc.Save(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");
-
         }
 
         public void AddProduct(Product product)
@@ -315,21 +313,15 @@
             throw new ProductNotFoundException();
         }
 
-        public void RemoveProduct(int id)
+        public void RemoveProduct(int id, Product product)
         {
-            bool hasBeenRemoved = false;
-            foreach (var product in this.catalogueList)
+
+            XElement emp = xmldoc.Descendants(product.GetType().Name)
+                .FirstOrDefault(p => p.Element("id").Value == id.ToString());
+            if (emp != null)
             {
-                if (product.ID == id)
-                {
-                    catalogueList.Remove(product);
-                    hasBeenRemoved = true;
-                    break;
-                }
-            }
-            if (!hasBeenRemoved)
-            {
-                throw new ProductNotFoundException("There is not product with such an id.");
+                emp.Remove();
+                xmldoc.Save(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");
             }
         }
 

@@ -3,15 +3,9 @@
     using FactoryLib.Utilities;
     using CatalogueLib.Products;
     using CatalogueLib.Products.Enumerations;
-    using CatalogueLib.Products.Struct;
 
     public class Factory : IMobileFactory, IBigAppliancesFactory, IComputerFactory, ISmallAppliancesFactory
     {
-        private readonly IDGenerator generator;
-        public Factory(IDGenerator generator)
-        {
-            this.generator = generator;
-        }
 
         public AirConditioner CreateAirConditioner(decimal price, bool isAvailable, int brand, string Color, string CountryOfBirth, string TypeOfSystem, bool HasWiFi)
         {

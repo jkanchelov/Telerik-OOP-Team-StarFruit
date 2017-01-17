@@ -38,7 +38,7 @@
             this.productsInBag.Add(product);
         }
 
-        public void RemoveProduct(int id)
+        public void RemoveProduct(int id, Product p)
         {
             bool hasBeenRemoved = false;
             foreach (var product in this.productsInBag)
