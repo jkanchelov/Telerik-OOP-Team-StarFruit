@@ -1,18 +1,17 @@
 ﻿namespace FactoryLib.Utilities
 {
-    using System.Threading;
+    using System.Linq;
 
-    public class IDGenerator
+    using CatalogueLib;
+
+    public struct IDGenerator
     {
-        private int id;
-
-        public IDGenerator()
+        public static int IdGen()
         {
-            this.id = 0;
-        }
-        public int GenerateID()
-        {
-            return Interlocked.Increment(ref this.id);
+            Catalogue c = new Catalogue();
+            int max = c.CatalogueList.Max(x => x.ID);
+            max++;
+            return max;
         }
     }
 }

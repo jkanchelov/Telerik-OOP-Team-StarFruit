@@ -7,6 +7,9 @@
     using CatalogueLib;
     using CatalogueLib.Products;
     using BagLib;
+    using FactoryLib;
+    using FactoryLib.Utilities;
+    using CatalogueLib.Products.Enumerations;
 
     public class Menu
     {
@@ -159,6 +162,8 @@
                     case "1114": bound = 3; break;
                     case "11141": bound = 3; break;
                     case "11142": bound = 3; break;
+                    //add product
+
 
 
                     //customer
@@ -432,6 +437,13 @@
                                           ? "There are no items in the bag."
                                           : b.ToString());
                     }
+                    //add product
+                    else if (key == "111111")
+                    {
+                        InsertAirConditioner();
+                        key = "11111";
+                        Menu.ShowMenu(key);
+                    }
 
                     else
                     {
@@ -441,6 +453,32 @@
             }
         }
 
+        private void InsertAirConditioner()
+        {
+            Catalogue c = new Catalogue();
+
+            IDGenerator genId = new IDGenerator();
+            Factory f = new Factory(genId);
+            Console.Write("Enter the price:");
+            decimal price = decimal.Parse(Console.ReadLine());
+            bool isAv = true;
+            Console.Write("Enter the number of the brand:");
+            int brand = int.Parse(Console.ReadLine());
+            Console.Write("Enter the color:");
+            string color = Console.ReadLine();
+            Console.Write("Enter the origin:");
+            string origin = Console.ReadLine();
+            Console.Write("Enter the system Type:");
+            string type = Console.ReadLine();
+            Console.Write("Enter if has WiFi (yes or no)");
+            string wf = Console.ReadLine();
+            bool hasWiFi = wf == "Yes" ? true : false;
+            var air = f.CreateAirConditioner(price, isAv, brand, color, origin, type, hasWiFi);
+            Console.WriteLine("Press Enter to submit");
+            c.InsertInXml(air);
+            
+            
+        }
 
         private string CheckPassword(string key)
         {

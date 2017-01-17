@@ -52,6 +52,10 @@
       <Project>{aae64ff6-4106-47a6-8686-89b124fc902e}</Project>
       <Name>CatalogueLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\FactoryLib\FactoryLib.csproj">
+      <Project>{054addfb-1397-4937-bf22-f368db5a4803}</Project>
+      <Name>FactoryLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

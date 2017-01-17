@@ -1,5 +1,6 @@
 ﻿namespace CatalogueLib
 {
+    using System;
     using System.Linq;
     using System.Xml.Linq;
     using System.Collections.Generic;
@@ -40,13 +41,13 @@
         /// </summary>
         private void CatalogInitializer()
         {
-            xmldoc = XDocument.Load("./ProductsData.xml");   //add xml document  
+            xmldoc = XDocument.Load(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");   //add xml document  
             var airConditions = xmldoc.Descendants("AirConditioner")
                 .Select(p => new AirConditioner(
                 int.Parse(p.Element("id").Value),
                 decimal.Parse(p.Element("price").Value),
                  (p.Element("isAvailable").Value == "true" ? true : false),
-                 (Brand)int.Parse(p.Element("brand").Value),
+                (Brand)int.Parse(p.Element("brand").Value),
                 p.Element("color").Value,
                  p.Element("origin").Value,
                  p.Element("typeOfSystem").Value,
@@ -256,7 +257,7 @@
                double.Parse(p.Element("capacity").Value),
                double.Parse(p.Element("cableLength").Value),
                int.Parse(p.Element("affixes").Value),
-               p.Element("hasBowl").Value == "true"?true:false
+               p.Element("hasBowl").Value == "true" ? true : false
               ));
             foreach (var item in mixers)
             {
@@ -278,6 +279,23 @@
             {
                 AddProduct(item);
             }
+        }
+
+        public void InsertInXml(AirConditioner air)
+        {
+            XElement airCond = new XElement("AirConditioner",
+                    new XElement("id", air.ID),
+                    new XElement("price", air.Price),
+                    new XElement("isAvailable", air.IsAvailable),
+                    new XElement("brand", (int)air.Brand),
+                    new XElement("color", air.Color),
+                    new XElement("origin", air.CountryOfOrigin),
+                    new XElement("typeOfSystem", air.TypeOfSystem),
+                    new XElement("HasWiFi", air.HasWiFi));
+            //xmldoc.Root.Element("BigAppliances");
+            xmldoc.Root.Add(airCond);
+            xmldoc.Save(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");
+
         }
 
         public void AddProduct(Product product)
@@ -314,6 +332,8 @@
                 throw new ProductNotFoundException("There is not product with such an id.");
             }
         }
+
+
 
         /// <summary>
         /// Filter from a collection with different types specific one

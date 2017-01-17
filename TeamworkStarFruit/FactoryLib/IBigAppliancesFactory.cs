@@ -5,7 +5,7 @@
 
     public interface IBigAppliancesFactory
     {
-        AirConditioner CreateAirConditioner(decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string TypeOfSystem, bool HasWiFi);
+        AirConditioner CreateAirConditioner(decimal price, bool isAvailable, int brand, string Color, string CountryOfBirth, string TypeOfSystem, bool HasWiFi);
 
         Oven CreateOven(decimal price, bool isAvailable, Brand brand, string Color, string CountryOfBirth, string ElectricOrGas);
 
