@@ -72,15 +72,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Content Include="Data\ProductsData.xml" />
-=======
-    <None Include="Products\BigAppliances\BA_ClassDiagram.cd" />
-    <None Include="Products\Computer\C_ClassDiagram.cd" />
-    <None Include="Products\Mobile\M_ClassDiagram.cd" />
-    <None Include="Products\Products_ClassDiagram.cd" />
-    <None Include="Products\SmallAppliances\SA_ClassDiagram.cd" />
->>>>>>> 84d3f15ccbc2aee11e56d9002bb1cf5a3ef1ddcc
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
