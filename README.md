@@ -6,7 +6,7 @@ https://github.com/jkanchelov/Telerik-OOP-Team-StarFruit
 
 **Author & Contributor List & usernames**
 -------------
-Borislav Dimitrov- Independent1309
+Borislav Dimitrov- Borislav_Dimitrov
 
 Jordan Kanchelov- jkanchelov
 

@@ -41,7 +41,7 @@
         /// </summary>
         private void CatalogInitializer()
         {
-            xmldoc = XDocument.Load(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");   //add xml document  
+            xmldoc = XDocument.Load(@"C:\Users\Yoana\Desktop\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");   //add xml document  
             var airConditions = xmldoc.Descendants("AirConditioner")
                 .Select(p => new AirConditioner(
                 int.Parse(p.Element("id").Value),
@@ -293,7 +293,7 @@
                     new XElement("typeOfSystem", air.TypeOfSystem),
                     new XElement("HasWiFi", air.HasWiFi));
             xmldoc.Root.Add(airCond);
-            xmldoc.Save(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");
+            xmldoc.Save(@"C:\Users\Yoana\Desktop\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");
         }
 
         public void AddProduct(Product product)
@@ -321,7 +321,7 @@
             if (emp != null)
             {
                 emp.Remove();
-                xmldoc.Save(@"C:\Users\Cveti\Documents\Visual Studio 2015\Projects\TeamWork\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");
+                xmldoc.Save(@"C:\Users\Yoana\Desktop\Telerik-OOP-Team-StarFruit\TeamworkStarFruit\CatalogueLib\Data\ProductsData.xml");
             }
         }
 
